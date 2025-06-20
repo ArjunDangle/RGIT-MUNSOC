@@ -1,6 +1,6 @@
-
 import { motion } from 'framer-motion';
 import TeamMemberCard from '@/components/TeamMemberCard';
+import PresidentsDesk from '@/components/PresidentsDesk';
 
 const Team = () => {
   const secretariat = [
@@ -94,7 +94,7 @@ const Team = () => {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
-            className="text-5xl md:text-6xl font-bold text-regal-gold mb-6"
+            className="text-6xl md:text-7xl lg:text-8xl font-bold font-playfair text-crisp-silver mb-6"
           >
             Our Team
           </motion.h1>
@@ -102,12 +102,15 @@ const Team = () => {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
-            className="text-xl text-crisp-silver/80 leading-relaxed"
+            className="text-xl font-inter text-crisp-silver/80 leading-relaxed"
           >
             Meet the dedicated individuals who make RGIT MUNSOC a beacon of diplomatic excellence
           </motion.p>
         </div>
       </section>
+
+      {/* President's Desk Section */}
+      <PresidentsDesk />
 
       {/* Secretariat Section */}
       <section className="py-20 bg-charcoal-slate">
@@ -119,10 +122,10 @@ const Team = () => {
             viewport={{ once: true }}
             className="text-center mb-16"
           >
-            <h2 className="text-4xl md:text-5xl font-bold text-regal-gold mb-6">
+            <h2 className="text-5xl md:text-6xl font-bold font-playfair text-crisp-silver mb-6">
               Secretariat
             </h2>
-            <div className="w-24 h-1 bg-regal-gold mx-auto"></div>
+            <div className="w-24 h-1 bg-diplomatic-blue mx-auto"></div>
           </motion.div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
@@ -143,10 +146,10 @@ const Team = () => {
             viewport={{ once: true }}
             className="text-center mb-16"
           >
-            <h2 className="text-4xl md:text-5xl font-bold text-regal-gold mb-6">
+            <h2 className="text-5xl md:text-6xl font-bold font-playfair text-crisp-silver mb-6">
               Core Team
             </h2>
-            <div className="w-24 h-1 bg-regal-gold mx-auto"></div>
+            <div className="w-24 h-1 bg-diplomatic-blue mx-auto"></div>
           </motion.div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">

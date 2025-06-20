@@ -56,23 +56,12 @@ const HeroSection = () => {
 
       {/* Content */}
       <div className="relative z-10 text-center px-4 max-w-5xl mx-auto">
-        {/* Diplomatic Quote */}
-        <motion.blockquote
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.2 }}
-          className="text-xl md:text-2xl font-light italic text-crisp-silver/90 mb-8 leading-relaxed"
-        >
-          "The United Nations was not created to take mankind to heaven, but to save humanity from hell."
-          <footer className="text-diplomatic-blue font-semibold mt-2 text-lg">— Dag Hammarskjöld</footer>
-        </motion.blockquote>
-
         {/* Main Heading */}
         <motion.h1
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.4 }}
-          className="text-5xl md:text-7xl lg:text-8xl font-bold mb-4"
+          transition={{ duration: 0.8, delay: 0.2 }}
+          className="text-7xl md:text-8xl lg:text-9xl font-bold font-playfair mb-6"
         >
           <span className="bg-gradient-to-r from-crisp-silver to-diplomatic-blue bg-clip-text text-transparent">
             RGIT MUNSOC
@@ -83,8 +72,8 @@ const HeroSection = () => {
         <motion.p
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.6 }}
-          className="text-2xl md:text-3xl font-light text-crisp-silver mb-12 tracking-wide"
+          transition={{ duration: 0.8, delay: 0.4 }}
+          className="text-3xl md:text-4xl font-light font-inter text-crisp-silver mb-12 tracking-wide"
         >
           Where Ideas Meet Diplomacy
         </motion.p>
@@ -93,7 +82,7 @@ const HeroSection = () => {
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.8 }}
+          transition={{ duration: 0.8, delay: 0.6 }}
           className="flex flex-col sm:flex-row gap-4 justify-center items-center"
         >
           <Link to="/rgitmun25">
@@ -104,7 +93,7 @@ const HeroSection = () => {
                 background: "linear-gradient(45deg, #2C3E50, #142840)"
               }}
               whileTap={{ scale: 0.95 }}
-              className="group bg-diplomatic-blue text-crisp-silver px-8 py-3 rounded-lg font-semibold flex items-center space-x-2 transition-all duration-300 hover:bg-opacity-90 border border-crisp-silver/20"
+              className="group bg-diplomatic-blue text-crisp-silver px-8 py-3 rounded-lg font-semibold font-inter flex items-center space-x-2 transition-all duration-300 hover:bg-opacity-90 border border-crisp-silver/20"
             >
               <span>Explore RGITMUN'25</span>
               <ArrowRight size={20} className="group-hover:translate-x-1 transition-transform" />
@@ -119,7 +108,7 @@ const HeroSection = () => {
                 color: "#F0F0F0"
               }}
               whileTap={{ scale: 0.95 }}
-              className="border-2 border-diplomatic-blue text-diplomatic-blue px-8 py-3 rounded-lg font-semibold transition-all duration-300"
+              className="border-2 border-diplomatic-blue text-diplomatic-blue px-8 py-3 rounded-lg font-semibold font-inter transition-all duration-300"
             >
               Meet the Team
             </motion.button>
@@ -131,7 +120,7 @@ const HeroSection = () => {
       <motion.div
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
-        transition={{ duration: 1, delay: 1.2 }}
+        transition={{ duration: 1, delay: 1.0 }}
         className="absolute bottom-8 left-1/2 transform -translate-x-1/2"
       >
         <motion.div
