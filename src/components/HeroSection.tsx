@@ -6,23 +6,27 @@ import { ArrowRight, Globe } from 'lucide-react';
 const HeroSection = () => {
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-deep-onyx">
-      {/* Animated UN-inspired Background */}
+      {/* Animated Background with Logo */}
       <div className="absolute inset-0 z-0">
         <div className="absolute inset-0 bg-gradient-to-br from-deep-onyx via-diplomatic-blue/20 to-charcoal-slate/30" />
         
-        {/* Floating Globe Icons */}
+        {/* Floating Logo Elements */}
         <motion.div
           animate={{ 
             rotate: 360,
             scale: [1, 1.1, 1]
           }}
           transition={{ 
-            rotate: { duration: 60, repeat: Infinity, ease: "linear" },
-            scale: { duration: 4, repeat: Infinity, ease: "easeInOut" }
+            rotate: { duration: 120, repeat: Infinity, ease: "linear" },
+            scale: { duration: 8, repeat: Infinity, ease: "easeInOut" }
           }}
-          className="absolute top-20 left-20 opacity-10"
+          className="absolute top-20 left-20 opacity-5"
         >
-          <Globe size={120} className="text-crisp-silver" />
+          <img 
+            src="/lovable-uploads/224c2136-69c0-494e-8499-61bb6bb623b7.png" 
+            alt="RGIT MUNSOC Logo" 
+            className="w-32 h-32 filter grayscale"
+          />
         </motion.div>
         
         <motion.div
@@ -31,12 +35,16 @@ const HeroSection = () => {
             y: [0, -20, 0]
           }}
           transition={{ 
-            rotate: { duration: 80, repeat: Infinity, ease: "linear" },
-            y: { duration: 6, repeat: Infinity, ease: "easeInOut" }
+            rotate: { duration: 150, repeat: Infinity, ease: "linear" },
+            y: { duration: 10, repeat: Infinity, ease: "easeInOut" }
           }}
-          className="absolute bottom-32 right-32 opacity-10"
+          className="absolute bottom-32 right-32 opacity-3"
         >
-          <Globe size={80} className="text-crisp-silver" />
+          <img 
+            src="/lovable-uploads/224c2136-69c0-494e-8499-61bb6bb623b7.png" 
+            alt="RGIT MUNSOC Logo" 
+            className="w-24 h-24 filter grayscale"
+          />
         </motion.div>
 
         <motion.div
@@ -45,12 +53,16 @@ const HeroSection = () => {
             x: [0, 30, 0]
           }}
           transition={{ 
-            rotate: { duration: 100, repeat: Infinity, ease: "linear" },
-            x: { duration: 8, repeat: Infinity, ease: "easeInOut" }
+            rotate: { duration: 200, repeat: Infinity, ease: "linear" },
+            x: { duration: 12, repeat: Infinity, ease: "easeInOut" }
           }}
-          className="absolute top-1/2 right-20 opacity-5"
+          className="absolute top-1/2 right-20 opacity-2"
         >
-          <Globe size={150} className="text-crisp-silver" />
+          <img 
+            src="/lovable-uploads/224c2136-69c0-494e-8499-61bb6bb623b7.png" 
+            alt="RGIT MUNSOC Logo" 
+            className="w-40 h-40 filter grayscale"
+          />
         </motion.div>
       </div>
 

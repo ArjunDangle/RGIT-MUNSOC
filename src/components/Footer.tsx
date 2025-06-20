@@ -9,12 +9,19 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {/* Logo and Description */}
           <div className="space-y-4">
-            <motion.div
-              whileHover={{ scale: 1.05 }}
-              className="text-2xl font-bold bg-gold-gradient bg-clip-text text-transparent"
-            >
-              RGIT MUNSOC
-            </motion.div>
+            <div className="flex items-center space-x-3">
+              <img
+                src="/lovable-uploads/224c2136-69c0-494e-8499-61bb6bb623b7.png"
+                alt="RGIT MUNSOC Logo"
+                className="h-12 w-12"
+              />
+              <motion.div
+                whileHover={{ scale: 1.05 }}
+                className="text-2xl font-bold bg-gold-gradient bg-clip-text text-transparent font-playfair"
+              >
+                RGIT MUNSOC
+              </motion.div>
+            </div>
             <p className="text-crisp-silver/80 text-sm leading-relaxed">
               Where Ideas Meet Diplomacy. The Model United Nations Society of Rajiv Gandhi Institute of Technology, fostering diplomatic excellence and global awareness.
             </p>
