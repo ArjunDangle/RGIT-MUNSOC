@@ -17,7 +17,7 @@ const Footer = () => {
               />
               <motion.div
                 whileHover={{ scale: 1.05 }}
-                className="text-2xl font-bold bg-gold-gradient bg-clip-text text-transparent font-playfair"
+                className="text-2xl font-bold bg-gradient-to-r from-crisp-silver to-diplomatic-blue bg-clip-text text-transparent font-playfair"
               >
                 RGIT MUNSOC
               </motion.div>
