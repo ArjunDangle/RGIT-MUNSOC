@@ -3,7 +3,7 @@ import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import HeroSection from '@/components/HeroSection';
 import AboutUs from '@/components/AboutUs';
-import PhotoGallery from '@/components/PhotoGallery';
+import LeaderQuotes from '@/components/LeaderQuotes';
 import QuoteCarousel from '@/components/QuoteCarousel';
 
 const Home = () => {
@@ -17,7 +17,7 @@ const Home = () => {
       <HeroSection />
       <AboutUs />
       <QuoteCarousel />
-      <PhotoGallery />
+      <LeaderQuotes />
     </motion.div>
   );
 };

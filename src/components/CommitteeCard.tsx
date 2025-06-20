@@ -22,14 +22,22 @@ const CommitteeCard = ({ committee, index }: CommitteeCardProps) => {
       whileInView={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.6, delay: index * 0.2 }}
       viewport={{ once: true }}
-      whileHover={{ y: -10 }}
-      className="bg-diplomatic-blue rounded-lg p-8 border border-charcoal-slate hover:border-regal-gold/50 transition-all duration-300"
+      whileHover={{ y: -10, scale: 1.02 }}
+      className="bg-diplomatic-blue rounded-lg p-8 border border-charcoal-slate hover:border-crisp-silver/50 transition-all duration-300"
     >
       <div className="flex items-center justify-between mb-6">
-        <div className="bg-regal-gold text-deep-onyx px-4 py-2 rounded-lg font-bold text-lg">
+        <motion.div 
+          className="bg-charcoal-slate text-crisp-silver px-4 py-2 rounded-lg font-bold text-lg border border-crisp-silver/20"
+          whileHover={{ scale: 1.05, backgroundColor: "#2C3E50" }}
+        >
           {committee.abbreviation}
-        </div>
-        <Users className="text-regal-gold" size={32} />
+        </motion.div>
+        <motion.div
+          whileHover={{ rotate: 15, scale: 1.1 }}
+          transition={{ duration: 0.2 }}
+        >
+          <Users className="text-crisp-silver" size={32} />
+        </motion.div>
       </div>
 
       <h3 className="text-2xl font-bold text-crisp-silver mb-4">
@@ -37,7 +45,7 @@ const CommitteeCard = ({ committee, index }: CommitteeCardProps) => {
       </h3>
 
       <div className="mb-6">
-        <h4 className="text-regal-gold font-semibold mb-2 flex items-center">
+        <h4 className="text-diplomatic-blue font-semibold mb-2 flex items-center">
           <FileText size={16} className="mr-2" />
           Agenda
         </h4>
@@ -51,9 +59,9 @@ const CommitteeCard = ({ committee, index }: CommitteeCardProps) => {
       </p>
 
       <motion.button
-        whileHover={{ scale: 1.05 }}
+        whileHover={{ scale: 1.05, backgroundColor: "#2C3E50", color: "#F0F0F0" }}
         whileTap={{ scale: 0.95 }}
-        className="flex items-center space-x-2 text-regal-gold border border-regal-gold px-4 py-2 rounded-lg hover:bg-regal-gold hover:text-deep-onyx transition-all duration-300"
+        className="flex items-center space-x-2 text-crisp-silver border border-crisp-silver/30 px-4 py-2 rounded-lg transition-all duration-300"
       >
         <Download size={16} />
         <span>Background Guide</span>

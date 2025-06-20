@@ -44,7 +44,7 @@ const QuoteCarousel = () => {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
           viewport={{ once: true }}
-          className="text-3xl md:text-4xl font-bold text-regal-gold mb-12"
+          className="text-3xl md:text-4xl font-bold text-crisp-silver mb-12"
         >
           Voices of Diplomacy
         </motion.h2>
@@ -53,19 +53,29 @@ const QuoteCarousel = () => {
           <AnimatePresence mode="wait">
             <motion.div
               key={currentIndex}
-              initial={{ opacity: 0, y: 50 }}
-              animate={{ opacity: 1, y: 0 }}
-              exit={{ opacity: 0, y: -50 }}
-              transition={{ duration: 0.6 }}
+              initial={{ opacity: 0, y: 50, rotateX: -15 }}
+              animate={{ opacity: 1, y: 0, rotateX: 0 }}
+              exit={{ opacity: 0, y: -50, rotateX: 15 }}
+              transition={{ duration: 0.6, ease: "easeInOut" }}
               className="absolute inset-0 flex flex-col justify-center"
             >
-              <blockquote className="text-xl md:text-2xl font-light italic text-crisp-silver/90 mb-6 leading-relaxed">
+              <motion.blockquote 
+                className="text-xl md:text-2xl font-light italic text-crisp-silver/90 mb-6 leading-relaxed"
+                initial={{ scale: 0.9 }}
+                animate={{ scale: 1 }}
+                transition={{ duration: 0.4, delay: 0.2 }}
+              >
                 "{quotes[currentIndex].text}"
-              </blockquote>
-              <footer className="text-regal-gold">
+              </motion.blockquote>
+              <motion.footer 
+                className="text-diplomatic-blue"
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                transition={{ duration: 0.4, delay: 0.4 }}
+              >
                 <div className="font-semibold text-lg">{quotes[currentIndex].author}</div>
                 <div className="text-sm text-crisp-silver/70">{quotes[currentIndex].role}</div>
-              </footer>
+              </motion.footer>
             </motion.div>
           </AnimatePresence>
         </div>
@@ -73,11 +83,13 @@ const QuoteCarousel = () => {
         {/* Pagination Dots */}
         <div className="flex justify-center space-x-2 mt-8">
           {quotes.map((_, index) => (
-            <button
+            <motion.button
               key={index}
               onClick={() => setCurrentIndex(index)}
+              whileHover={{ scale: 1.2 }}
+              whileTap={{ scale: 0.9 }}
               className={`w-3 h-3 rounded-full transition-all duration-300 ${
-                index === currentIndex ? 'bg-regal-gold' : 'bg-charcoal-slate hover:bg-regal-gold/50'
+                index === currentIndex ? 'bg-diplomatic-blue scale-125' : 'bg-charcoal-slate hover:bg-diplomatic-blue/50'
               }`}
             />
           ))}

@@ -1,20 +1,57 @@
 
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
-import { ArrowRight } from 'lucide-react';
+import { ArrowRight, Globe } from 'lucide-react';
 
 const HeroSection = () => {
   return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
-      {/* Background Image with Overlay */}
+    <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-deep-onyx">
+      {/* Animated UN-inspired Background */}
       <div className="absolute inset-0 z-0">
-        <div 
-          className="w-full h-full bg-cover bg-center bg-fixed"
-          style={{
-            backgroundImage: `url('https://images.unsplash.com/photo-1605810230434-7631ac76ec81?ixlib=rb-4.0.3&auto=format&fit=crop&w=2000&q=80')`
+        <div className="absolute inset-0 bg-gradient-to-br from-deep-onyx via-diplomatic-blue/20 to-charcoal-slate/30" />
+        
+        {/* Floating Globe Icons */}
+        <motion.div
+          animate={{ 
+            rotate: 360,
+            scale: [1, 1.1, 1]
           }}
-        />
-        <div className="absolute inset-0 bg-diplomatic-gradient opacity-85" />
+          transition={{ 
+            rotate: { duration: 60, repeat: Infinity, ease: "linear" },
+            scale: { duration: 4, repeat: Infinity, ease: "easeInOut" }
+          }}
+          className="absolute top-20 left-20 opacity-10"
+        >
+          <Globe size={120} className="text-crisp-silver" />
+        </motion.div>
+        
+        <motion.div
+          animate={{ 
+            rotate: -360,
+            y: [0, -20, 0]
+          }}
+          transition={{ 
+            rotate: { duration: 80, repeat: Infinity, ease: "linear" },
+            y: { duration: 6, repeat: Infinity, ease: "easeInOut" }
+          }}
+          className="absolute bottom-32 right-32 opacity-10"
+        >
+          <Globe size={80} className="text-crisp-silver" />
+        </motion.div>
+
+        <motion.div
+          animate={{ 
+            rotate: 360,
+            x: [0, 30, 0]
+          }}
+          transition={{ 
+            rotate: { duration: 100, repeat: Infinity, ease: "linear" },
+            x: { duration: 8, repeat: Infinity, ease: "easeInOut" }
+          }}
+          className="absolute top-1/2 right-20 opacity-5"
+        >
+          <Globe size={150} className="text-crisp-silver" />
+        </motion.div>
       </div>
 
       {/* Content */}
@@ -27,7 +64,7 @@ const HeroSection = () => {
           className="text-xl md:text-2xl font-light italic text-crisp-silver/90 mb-8 leading-relaxed"
         >
           "The United Nations was not created to take mankind to heaven, but to save humanity from hell."
-          <footer className="text-regal-gold mt-2 text-lg">— Dag Hammarskjöld</footer>
+          <footer className="text-diplomatic-blue font-semibold mt-2 text-lg">— Dag Hammarskjöld</footer>
         </motion.blockquote>
 
         {/* Main Heading */}
@@ -37,7 +74,7 @@ const HeroSection = () => {
           transition={{ duration: 0.8, delay: 0.4 }}
           className="text-5xl md:text-7xl lg:text-8xl font-bold mb-4"
         >
-          <span className="bg-gold-gradient bg-clip-text text-transparent">
+          <span className="bg-gradient-to-r from-crisp-silver to-diplomatic-blue bg-clip-text text-transparent">
             RGIT MUNSOC
           </span>
         </motion.h1>
@@ -61,9 +98,13 @@ const HeroSection = () => {
         >
           <Link to="/rgitmun25">
             <motion.button
-              whileHover={{ scale: 1.05, boxShadow: "0 10px 25px rgba(200, 159, 91, 0.3)" }}
+              whileHover={{ 
+                scale: 1.05, 
+                boxShadow: "0 10px 25px rgba(20, 40, 64, 0.4)",
+                background: "linear-gradient(45deg, #2C3E50, #142840)"
+              }}
               whileTap={{ scale: 0.95 }}
-              className="group bg-regal-gold text-deep-onyx px-8 py-3 rounded-lg font-semibold flex items-center space-x-2 transition-all duration-300 hover:bg-opacity-90"
+              className="group bg-diplomatic-blue text-crisp-silver px-8 py-3 rounded-lg font-semibold flex items-center space-x-2 transition-all duration-300 hover:bg-opacity-90 border border-crisp-silver/20"
             >
               <span>Explore RGITMUN'25</span>
               <ArrowRight size={20} className="group-hover:translate-x-1 transition-transform" />
@@ -72,9 +113,13 @@ const HeroSection = () => {
 
           <Link to="/team">
             <motion.button
-              whileHover={{ scale: 1.05 }}
+              whileHover={{ 
+                scale: 1.05,
+                backgroundColor: "#2C3E50",
+                color: "#F0F0F0"
+              }}
               whileTap={{ scale: 0.95 }}
-              className="border-2 border-regal-gold text-regal-gold px-8 py-3 rounded-lg font-semibold transition-all duration-300 hover:bg-regal-gold hover:text-deep-onyx"
+              className="border-2 border-diplomatic-blue text-diplomatic-blue px-8 py-3 rounded-lg font-semibold transition-all duration-300"
             >
               Meet the Team
             </motion.button>
@@ -92,12 +137,12 @@ const HeroSection = () => {
         <motion.div
           animate={{ y: [0, 10, 0] }}
           transition={{ duration: 2, repeat: Infinity }}
-          className="w-6 h-10 border-2 border-regal-gold rounded-full flex justify-center"
+          className="w-6 h-10 border-2 border-diplomatic-blue rounded-full flex justify-center"
         >
           <motion.div
             animate={{ y: [0, 16, 0] }}
             transition={{ duration: 2, repeat: Infinity }}
-            className="w-1 h-3 bg-regal-gold rounded-full mt-2"
+            className="w-1 h-3 bg-diplomatic-blue rounded-full mt-2"
           />
         </motion.div>
       </motion.div>
