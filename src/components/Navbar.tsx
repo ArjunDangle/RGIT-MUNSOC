@@ -20,16 +20,10 @@ const Navbar = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
-          <Link to="/" className="flex items-center space-x-3">
-            <motion.img
-              src="/lovable-uploads/224c2136-69c0-494e-8499-61bb6bb623b7.png"
-              alt="RGIT MUNSOC Logo"
-              className="h-10 w-10"
-              whileHover={{ scale: 1.05 }}
-            />
+          <Link to="/" className="flex items-center space-x-2">
             <motion.div
               whileHover={{ scale: 1.05 }}
-              className="text-xl font-bold bg-gradient-to-r from-crisp-silver to-diplomatic-blue bg-clip-text text-transparent font-playfair"
+              className="text-2xl font-bold bg-gold-gradient bg-clip-text text-transparent"
             >
               RGIT MUNSOC
             </motion.div>
