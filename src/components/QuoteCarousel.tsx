@@ -37,14 +37,14 @@ const QuoteCarousel = () => {
   }, [quotes.length]);
 
   return (
-    <section className="py-20 bg-deep-onyx">
+    <section className="py-20 bg-navy-blue">
       <div className="max-w-4xl mx-auto px-4 text-center">
         <motion.h2
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
           viewport={{ once: true }}
-          className="text-3xl md:text-4xl font-bold text-crisp-silver mb-12"
+          className="text-3xl md:text-4xl font-bold text-pure-white mb-12"
         >
           Voices of Diplomacy
         </motion.h2>
@@ -60,7 +60,7 @@ const QuoteCarousel = () => {
               className="absolute inset-0 flex flex-col justify-center"
             >
               <motion.blockquote 
-                className="text-xl md:text-2xl font-light italic text-crisp-silver/90 mb-6 leading-relaxed"
+                className="text-xl md:text-2xl font-light italic text-pure-white/90 mb-6 leading-relaxed"
                 initial={{ scale: 0.9 }}
                 animate={{ scale: 1 }}
                 transition={{ duration: 0.4, delay: 0.2 }}
@@ -68,13 +68,13 @@ const QuoteCarousel = () => {
                 "{quotes[currentIndex].text}"
               </motion.blockquote>
               <motion.footer 
-                className="text-diplomatic-blue"
+                className="text-un-blue"
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 transition={{ duration: 0.4, delay: 0.4 }}
               >
                 <div className="font-semibold text-lg">{quotes[currentIndex].author}</div>
-                <div className="text-sm text-crisp-silver/70">{quotes[currentIndex].role}</div>
+                <div className="text-sm text-pure-white/70">{quotes[currentIndex].role}</div>
               </motion.footer>
             </motion.div>
           </AnimatePresence>
@@ -89,7 +89,7 @@ const QuoteCarousel = () => {
               whileHover={{ scale: 1.2 }}
               whileTap={{ scale: 0.9 }}
               className={`w-3 h-3 rounded-full transition-all duration-300 ${
-                index === currentIndex ? 'bg-diplomatic-blue scale-125' : 'bg-charcoal-slate hover:bg-diplomatic-blue/50'
+                index === currentIndex ? 'bg-un-blue scale-125' : 'bg-soft-grey hover:bg-un-blue/50'
               }`}
             />
           ))}

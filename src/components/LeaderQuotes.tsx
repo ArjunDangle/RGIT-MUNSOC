@@ -1,12 +1,11 @@
 
 import { motion } from 'framer-motion';
 import { useInView } from 'framer-motion';
-import { useRef, useState } from 'react';
+import { useRef } from 'react';
 
 const LeaderQuotes = () => {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, amount: 0.1 });
-  const [currentQuote, setCurrentQuote] = useState(0);
 
   const quotes = [
     {
@@ -48,7 +47,7 @@ const LeaderQuotes = () => {
   ];
 
   return (
-    <section ref={ref} className="py-20 bg-deep-onyx">
+    <section ref={ref} className="py-20 bg-pure-white">
       <div className="max-w-6xl mx-auto px-4">
         <motion.div
           initial={{ opacity: 0, y: 50 }}
@@ -56,11 +55,11 @@ const LeaderQuotes = () => {
           transition={{ duration: 0.8 }}
           className="text-center mb-16"
         >
-          <h2 className="text-5xl md:text-6xl lg:text-7xl font-bold font-playfair text-crisp-silver mb-6">
+          <h2 className="text-5xl md:text-6xl lg:text-7xl font-bold font-playfair text-charcoal-black mb-6">
             Voices of Leaders
           </h2>
-          <div className="w-24 h-1 bg-diplomatic-blue mx-auto mb-8"></div>
-          <p className="text-xl font-inter text-crisp-silver/70">
+          <div className="w-24 h-1 bg-un-blue mx-auto mb-8"></div>
+          <p className="text-xl font-inter text-charcoal-black/70">
             Wisdom from those who shaped our world
           </p>
         </motion.div>
@@ -73,18 +72,18 @@ const LeaderQuotes = () => {
               animate={isInView ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.6, delay: index * 0.2 }}
               whileHover={{ y: -10, scale: 1.02 }}
-              className="bg-diplomatic-blue rounded-lg p-8 border border-charcoal-slate hover:border-crisp-silver/30 transition-all duration-300"
+              className="bg-navy-blue rounded-lg p-8 border border-un-blue/20 hover:border-un-blue/50 transition-all duration-300 shadow-lg hover:shadow-xl"
             >
               <div className="flex items-center mb-6">
                 <motion.img
                   whileHover={{ scale: 1.1 }}
                   src={quote.image}
                   alt={quote.author}
-                  className="w-16 h-16 rounded-full object-cover border-2 border-crisp-silver/20"
+                  className="w-16 h-16 rounded-full object-cover border-2 border-un-blue/30"
                 />
                 <div className="ml-4">
-                  <h4 className="text-lg font-bold font-inter text-crisp-silver">{quote.author}</h4>
-                  <p className="text-sm font-inter text-crisp-silver/60">{quote.title}</p>
+                  <h4 className="text-lg font-bold font-inter text-pure-white">{quote.author}</h4>
+                  <p className="text-sm font-inter text-un-blue">{quote.title}</p>
                 </div>
               </div>
               
@@ -92,7 +91,7 @@ const LeaderQuotes = () => {
                 initial={{ opacity: 0 }}
                 animate={isInView ? { opacity: 1 } : {}}
                 transition={{ duration: 0.8, delay: index * 0.2 + 0.4 }}
-                className="text-crisp-silver/90 font-inter text-lg leading-relaxed italic"
+                className="text-pure-white/90 font-inter text-lg leading-relaxed italic"
               >
                 "{quote.text}"
               </motion.blockquote>

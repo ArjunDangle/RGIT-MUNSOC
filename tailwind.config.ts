@@ -1,3 +1,4 @@
+
 import type { Config } from "tailwindcss";
 
 export default {
@@ -66,12 +67,12 @@ export default {
 					border: 'hsl(var(--sidebar-border))',
 					ring: 'hsl(var(--sidebar-ring))'
 				},
-				// RGIT MUNSOC Diplomatic Color Palette
-				'deep-onyx': '#0A0A0A',
-				'diplomatic-blue': '#142840',
-				'charcoal-slate': '#2C3E50',
-				'crisp-silver': '#F0F0F0',
-				'regal-gold': '#C89F5B',
+				// New UN-inspired Peace Palette
+				'un-blue': '#66B2FF',
+				'navy-blue': '#001F3F',
+				'pure-white': '#FFFFFF',
+				'charcoal-black': '#333333',
+				'soft-grey': '#CCCCCC',
 			},
 			borderRadius: {
 				lg: 'var(--radius)',
@@ -134,8 +135,8 @@ export default {
 				'scale-in': 'scale-in 0.4s ease-out'
 			},
 			backgroundImage: {
-				'diplomatic-gradient': 'linear-gradient(135deg, #0A0A0A 0%, #142840 100%)',
-				'gold-gradient': 'linear-gradient(45deg, #C89F5B 0%, #D4AF6A 100%)'
+				'peace-gradient': 'linear-gradient(135deg, #001F3F 0%, #66B2FF 100%)',
+				'un-gradient': 'linear-gradient(45deg, #66B2FF 0%, #001F3F 100%)'
 			}
 		}
 	},
