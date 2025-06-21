@@ -1,6 +1,6 @@
 
 import { motion } from 'framer-motion';
-import { Globe, Users, Calendar, Award, FileText, MapPin } from 'lucide-react';
+import { Globe, Users, Calendar, Award, FileText, MapPin, Handshake, Scale } from 'lucide-react';
 import CommitteeCard from '@/components/CommitteeCard';
 
 const RGITMUN = () => {
@@ -90,13 +90,21 @@ const RGITMUN = () => {
           />
           <div className="absolute inset-0 bg-diplomatic-gradient opacity-90" />
           
-          {/* Floating UN-inspired elements */}
+          {/* Diplomatic Vector Illustrations */}
           <motion.div
             animate={{ rotate: 360 }}
             transition={{ duration: 60, repeat: Infinity, ease: "linear" }}
-            className="absolute top-20 right-20 opacity-10"
+            className="absolute top-20 right-20 opacity-15"
           >
-            <Globe size={100} className="text-crisp-white" />
+            <Scale size={80} className="text-crisp-white" />
+          </motion.div>
+          
+          <motion.div
+            animate={{ rotate: -360 }}
+            transition={{ duration: 90, repeat: Infinity, ease: "linear" }}
+            className="absolute bottom-20 left-20 opacity-10"
+          >
+            <Handshake size={100} className="text-crisp-white" />
           </motion.div>
         </div>
 
@@ -114,7 +122,7 @@ const RGITMUN = () => {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
-            className="text-5xl md:text-6xl font-bold text-crisp-white mb-6 font-playfair"
+            className="text-5xl md:text-6xl font-bold text-crisp-white mb-6 font-cormorant"
           >
             RGITMUN'25
           </motion.h1>
@@ -126,7 +134,7 @@ const RGITMUN = () => {
             className="flex items-center justify-center space-x-2 text-xl md:text-2xl text-cool-light-blue mb-4"
           >
             <Calendar className="w-6 h-6" />
-            <span>April 12-13, 2025</span>
+            <span className="font-crimson">April 12-13, 2025</span>
           </motion.div>
           
           <motion.div
@@ -136,14 +144,14 @@ const RGITMUN = () => {
             className="flex items-center justify-center space-x-2 text-lg text-crisp-white/80 mb-8"
           >
             <MapPin className="w-5 h-5" />
-            <span>Rajiv Gandhi Institute of Technology, Mumbai</span>
+            <span className="font-inter">Rajiv Gandhi Institute of Technology, Mumbai</span>
           </motion.div>
           
           <motion.p
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.4 }}
-            className="text-lg text-crisp-white/80 leading-relaxed max-w-3xl mx-auto"
+            className="text-lg text-crisp-white/80 leading-relaxed max-w-3xl mx-auto font-inter"
           >
             Join us for two days of intense diplomatic negotiations, thoughtful debate, and global problem-solving as we tackle the world's most pressing challenges in the spirit of international cooperation.
           </motion.p>
@@ -160,7 +168,7 @@ const RGITMUN = () => {
             viewport={{ once: true }}
             className="text-center mb-16"
           >
-            <h2 className="text-4xl md:text-5xl font-bold text-dark-grey mb-6 font-playfair">
+            <h2 className="text-4xl md:text-5xl font-bold text-dark-grey mb-6 font-cormorant">
               Conference Highlights
             </h2>
             <div className="w-24 h-1 bg-cool-light-blue mx-auto"></div>
@@ -179,10 +187,10 @@ const RGITMUN = () => {
                 <div className="text-cool-light-blue mb-4 flex justify-center">
                   {highlight.icon}
                 </div>
-                <h3 className="text-xl font-semibold text-dark-grey mb-2">
+                <h3 className="text-xl font-semibold text-dark-grey mb-2 font-crimson">
                   {highlight.title}
                 </h3>
-                <p className="text-muted-silver text-sm">
+                <p className="text-muted-silver text-sm font-inter">
                   {highlight.description}
                 </p>
               </motion.div>
@@ -201,7 +209,7 @@ const RGITMUN = () => {
             viewport={{ once: true }}
             className="text-center mb-16"
           >
-            <h2 className="text-4xl md:text-5xl font-bold text-dark-grey mb-6 font-playfair">
+            <h2 className="text-4xl md:text-5xl font-bold text-dark-grey mb-6 font-cormorant">
               Committees
             </h2>
             <div className="w-24 h-1 bg-cool-light-blue mx-auto"></div>
@@ -225,7 +233,7 @@ const RGITMUN = () => {
             viewport={{ once: true }}
             className="text-center mb-16"
           >
-            <h2 className="text-4xl md:text-5xl font-bold text-dark-grey mb-6 font-playfair">
+            <h2 className="text-4xl md:text-5xl font-bold text-dark-grey mb-6 font-cormorant">
               Event Timeline
             </h2>
             <div className="w-24 h-1 bg-cool-light-blue mx-auto"></div>
@@ -241,14 +249,14 @@ const RGITMUN = () => {
                 viewport={{ once: true }}
                 className="bg-executive-navy/5 rounded-lg p-6 border border-muted-silver/20"
               >
-                <h3 className="text-2xl font-bold text-cool-light-blue mb-6 font-playfair">{day.day}</h3>
+                <h3 className="text-2xl font-bold text-cool-light-blue mb-6 font-cormorant">{day.day}</h3>
                 <div className="space-y-4">
                   {day.events.map((event, eventIndex) => (
                     <div key={eventIndex} className="flex items-start space-x-4 p-3 rounded border-l-4 border-cool-light-blue/50 bg-crisp-white">
-                      <div className="text-cool-light-blue font-semibold min-w-[80px] text-sm">
+                      <div className="text-cool-light-blue font-semibold min-w-[80px] text-sm font-inter">
                         {event.time}
                       </div>
-                      <div className="text-dark-grey text-sm">{event.event}</div>
+                      <div className="text-dark-grey text-sm font-inter">{event.event}</div>
                     </div>
                   ))}
                 </div>
@@ -268,16 +276,16 @@ const RGITMUN = () => {
             viewport={{ once: true }}
           >
             <Globe className="w-16 h-16 text-crisp-white mx-auto mb-6" />
-            <h2 className="text-4xl font-bold text-crisp-white mb-6 font-playfair">
+            <h2 className="text-4xl font-bold text-crisp-white mb-6 font-cormorant">
               Ready to Join the Diplomatic Arena?
             </h2>
-            <p className="text-xl text-crisp-white/80 mb-8 leading-relaxed">
+            <p className="text-xl text-crisp-white/80 mb-8 leading-relaxed font-inter">
               Register now for RGITMUN'25 and be part of an unforgettable diplomatic experience that will challenge your perspectives and enhance your global understanding.
             </p>
             <motion.button
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
-              className="bg-crisp-white text-executive-navy px-8 py-3 rounded-lg font-semibold text-lg transition-all duration-300 hover:bg-opacity-90 border border-muted-silver/30"
+              className="bg-crisp-white text-executive-navy px-8 py-3 rounded-lg font-semibold text-lg transition-all duration-300 hover:bg-opacity-90 border border-muted-silver/30 font-inter"
             >
               Register for RGITMUN'25
             </motion.button>
