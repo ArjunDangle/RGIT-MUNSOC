@@ -88,13 +88,13 @@ const Team = () => {
       className="pt-16"
     >
       {/* Hero Section */}
-      <section className="relative py-20 bg-diplomatic-gradient">
+      <section className="relative py-20 bg-executive-navy">
         <div className="max-w-4xl mx-auto px-4 text-center">
           <motion.h1
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
-            className="text-6xl md:text-7xl lg:text-8xl font-bold font-playfair text-crisp-silver mb-6"
+            className="text-6xl md:text-7xl lg:text-8xl font-bold font-cormorant text-crisp-white mb-6"
           >
             Our Team
           </motion.h1>
@@ -102,7 +102,7 @@ const Team = () => {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
-            className="text-xl font-inter text-crisp-silver/80 leading-relaxed"
+            className="text-xl font-inter text-crisp-white/80 leading-relaxed"
           >
             Meet the dedicated individuals who make RGIT MUNSOC a beacon of diplomatic excellence
           </motion.p>
@@ -113,7 +113,7 @@ const Team = () => {
       <PresidentsDesk />
 
       {/* Secretariat Section */}
-      <section className="py-20 bg-charcoal-slate">
+      <section className="py-20 bg-executive-navy">
         <div className="max-w-7xl mx-auto px-4">
           <motion.div
             initial={{ opacity: 0, y: 50 }}
@@ -122,10 +122,10 @@ const Team = () => {
             viewport={{ once: true }}
             className="text-center mb-16"
           >
-            <h2 className="text-5xl md:text-6xl font-bold font-playfair text-crisp-silver mb-6">
+            <h2 className="text-5xl md:text-6xl font-bold font-cormorant text-crisp-white mb-6">
               Secretariat
             </h2>
-            <div className="w-24 h-1 bg-diplomatic-blue mx-auto"></div>
+            <div className="w-24 h-1 bg-cool-light-blue mx-auto"></div>
           </motion.div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
@@ -137,7 +137,7 @@ const Team = () => {
       </section>
 
       {/* Core Team Section */}
-      <section className="py-20 bg-deep-onyx">
+      <section className="py-20 bg-executive-navy/90">
         <div className="max-w-7xl mx-auto px-4">
           <motion.div
             initial={{ opacity: 0, y: 50 }}
@@ -146,10 +146,10 @@ const Team = () => {
             viewport={{ once: true }}
             className="text-center mb-16"
           >
-            <h2 className="text-5xl md:text-6xl font-bold font-playfair text-crisp-silver mb-6">
+            <h2 className="text-5xl md:text-6xl font-bold font-cormorant text-crisp-white mb-6">
               Core Team
             </h2>
-            <div className="w-24 h-1 bg-diplomatic-blue mx-auto"></div>
+            <div className="w-24 h-1 bg-cool-light-blue mx-auto"></div>
           </motion.div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">

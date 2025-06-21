@@ -1,4 +1,3 @@
-
 import { motion } from 'framer-motion';
 import { Globe, Users, Calendar, Award, FileText, MapPin, Handshake, Scale } from 'lucide-react';
 import CommitteeCard from '@/components/CommitteeCard';
@@ -88,7 +87,7 @@ const RGITMUN = () => {
               backgroundImage: `url('https://images.unsplash.com/photo-1492321936769-b49830bc1d1e?ixlib=rb-4.0.3&auto=format&fit=crop&w=2000&q=80')`
             }}
           />
-          <div className="absolute inset-0 bg-diplomatic-gradient opacity-90" />
+          <div className="absolute inset-0 bg-executive-navy/70" />
           
           {/* Diplomatic Vector Illustrations */}
           <motion.div
@@ -155,6 +154,34 @@ const RGITMUN = () => {
           >
             Join us for two days of intense diplomatic negotiations, thoughtful debate, and global problem-solving as we tackle the world's most pressing challenges in the spirit of international cooperation.
           </motion.p>
+        </div>
+      </section>
+
+      {/* Diversity & Unity Section */}
+      <section className="py-20 bg-executive-navy relative overflow-hidden">
+        <div className="absolute inset-0 z-0">
+          <div 
+            className="w-full h-full bg-cover bg-center opacity-20"
+            style={{
+              backgroundImage: `url('/lovable-uploads/8345a4ed-dc15-4866-b83e-118d5db10525.png')`
+            }}
+          />
+        </div>
+        <div className="max-w-6xl mx-auto px-4 relative z-10">
+          <motion.div
+            initial={{ opacity: 0, y: 50 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+            className="text-center"
+          >
+            <h2 className="text-4xl md:text-5xl font-bold text-crisp-white mb-6 font-cormorant">
+              United in Diversity
+            </h2>
+            <p className="text-xl text-crisp-white/80 leading-relaxed max-w-4xl mx-auto font-inter">
+              RGITMUN'25 brings together diverse voices from across the globe, creating a platform where different perspectives unite to address the world's most pressing challenges. Together, we shape the future through diplomatic excellence and mutual understanding.
+            </p>
+          </motion.div>
         </div>
       </section>
 
@@ -267,7 +294,7 @@ const RGITMUN = () => {
       </section>
 
       {/* Registration CTA */}
-      <section className="py-20 bg-diplomatic-gradient">
+      <section className="py-20 bg-executive-navy">
         <div className="max-w-4xl mx-auto px-4 text-center">
           <motion.div
             initial={{ opacity: 0, y: 50 }}

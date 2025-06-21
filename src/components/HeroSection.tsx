@@ -5,38 +5,16 @@ import { ArrowRight, Globe, Scale, Handshake, Users } from 'lucide-react';
 
 const HeroSection = () => {
   return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-executive-navy">
-      {/* Animated Background */}
+    <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
+      {/* Background Image */}
       <div className="absolute inset-0 z-0">
-        <div className="absolute inset-0 bg-gradient-to-br from-executive-navy via-cool-light-blue/10 to-muted-silver/5" />
-        
-        {/* Large Diplomatic Vector Illustration - Center */}
-        <motion.div
-          initial={{ opacity: 0, scale: 0.8 }}
-          animate={{ opacity: 0.08, scale: 1 }}
-          transition={{ duration: 2 }}
-          className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2"
-        >
-          <div className="relative w-[600px] h-[600px] md:w-[800px] md:h-[800px]">
-            {/* World Map SVG Background */}
-            <svg viewBox="0 0 800 400" className="w-full h-full text-crisp-white/10">
-              <path d="M158 206c-1-3-2-7-2-11 0-4 1-8 2-11l46-23c4-2 9-2 13 0l46 23c1 3 2 7 2 11 0 4-1 8-2 11l-46 23c-4 2-9 2-13 0z" />
-              <circle cx="400" cy="200" r="150" fill="none" stroke="currentColor" strokeWidth="2" />
-              <path d="M300 150l200 0M300 200l200 0M300 250l200 0" stroke="currentColor" strokeWidth="1" />
-              <path d="M350 100l0 200M400 100l0 200M450 100l0 200" stroke="currentColor" strokeWidth="1" />
-            </svg>
-            {/* Overlaying diplomatic symbols */}
-            <div className="absolute inset-0 flex items-center justify-center">
-              <motion.div
-                animate={{ rotate: 360 }}
-                transition={{ duration: 120, repeat: Infinity, ease: "linear" }}
-                className="relative"
-              >
-                <Scale size={80} className="text-crisp-white/10" />
-              </motion.div>
-            </div>
-          </div>
-        </motion.div>
+        <div 
+          className="w-full h-full bg-cover bg-center bg-no-repeat"
+          style={{
+            backgroundImage: `url('/lovable-uploads/ad6fd4ba-b18f-4312-83e8-f6fa242553ab.png')`
+          }}
+        />
+        <div className="absolute inset-0 bg-executive-navy/60" />
         
         {/* Smaller floating diplomatic elements - positioned to avoid mobile overlap */}
         <motion.div
@@ -48,7 +26,7 @@ const HeroSection = () => {
             rotate: { duration: 80, repeat: Infinity, ease: "linear" },
             scale: { duration: 8, repeat: Infinity, ease: "easeInOut" }
           }}
-          className="absolute top-20 left-5 md:top-16 md:left-16 opacity-10"
+          className="absolute top-20 left-5 md:top-16 md:left-16 opacity-20"
         >
           <Handshake size={40} className="text-crisp-white md:w-[60px] md:h-[60px]" />
         </motion.div>
@@ -62,7 +40,7 @@ const HeroSection = () => {
             rotate: { duration: 100, repeat: Infinity, ease: "linear" },
             y: { duration: 10, repeat: Infinity, ease: "easeInOut" }
           }}
-          className="absolute bottom-32 right-5 md:bottom-24 md:right-24 opacity-8"
+          className="absolute bottom-32 right-5 md:bottom-24 md:right-24 opacity-15"
         >
           <Users size={35} className="text-crisp-white md:w-[55px] md:h-[55px]" />
         </motion.div>
@@ -76,7 +54,7 @@ const HeroSection = () => {
             rotate: { duration: 90, repeat: Infinity, ease: "linear" },
             x: { duration: 12, repeat: Infinity, ease: "easeInOut" }
           }}
-          className="absolute top-1/3 right-2 md:right-12 opacity-6"
+          className="absolute top-1/3 right-2 md:right-12 opacity-10"
         >
           <Globe size={45} className="text-crisp-white md:w-[70px] md:h-[70px]" />
         </motion.div>
