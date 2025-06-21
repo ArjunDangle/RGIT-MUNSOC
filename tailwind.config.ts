@@ -67,12 +67,12 @@ export default {
 					border: 'hsl(var(--sidebar-border))',
 					ring: 'hsl(var(--sidebar-ring))'
 				},
-				// Global Harmony Palette
-				'sky-blue': '#87CEEB',
-				'deep-navy': '#001F3F',
-				'pure-white': '#FFFFFF',
-				'charcoal-grey': '#36454F',
-				'muted-gold': '#D4AF37',
+				// Modern Diplomacy Palette
+				'cool-light-blue': '#ADD8E6',
+				'executive-navy': '#001F3F',
+				'crisp-white': '#FFFFFF',
+				'dark-grey': '#343434',
+				'muted-silver': '#A9A9A9',
 			},
 			borderRadius: {
 				lg: 'var(--radius)',
@@ -125,6 +125,22 @@ export default {
 						opacity: '1',
 						transform: 'scale(1)'
 					}
+				},
+				'orbit': {
+					'0%': {
+						transform: 'rotate(0deg) translateX(100px) rotate(0deg)'
+					},
+					'100%': {
+						transform: 'rotate(360deg) translateX(100px) rotate(-360deg)'
+					}
+				},
+				'float': {
+					'0%, 100%': {
+						transform: 'translateY(0px)'
+					},
+					'50%': {
+						transform: 'translateY(-20px)'
+					}
 				}
 			},
 			animation: {
@@ -132,11 +148,13 @@ export default {
 				'accordion-up': 'accordion-up 0.2s ease-out',
 				'fade-in': 'fade-in 0.6s ease-out',
 				'slide-in-left': 'slide-in-left 0.5s ease-out',
-				'scale-in': 'scale-in 0.4s ease-out'
+				'scale-in': 'scale-in 0.4s ease-out',
+				'orbit': 'orbit 60s linear infinite',
+				'float': 'float 6s ease-in-out infinite'
 			},
 			backgroundImage: {
-				'harmony-gradient': 'linear-gradient(135deg, #001F3F 0%, #87CEEB 100%)',
-				'prestige-gradient': 'linear-gradient(45deg, #87CEEB 0%, #D4AF37 100%)'
+				'diplomatic-gradient': 'linear-gradient(135deg, #001F3F 0%, #ADD8E6 100%)',
+				'subtle-gradient': 'linear-gradient(45deg, #ADD8E6 0%, #A9A9A9 100%)'
 			}
 		}
 	},

@@ -4,7 +4,7 @@ import { Instagram, Linkedin, Mail, MapPin } from 'lucide-react';
 
 const Footer = () => {
   return (
-    <footer className="bg-deep-navy border-t border-muted-gold/20">
+    <footer className="bg-executive-navy border-t border-muted-silver/20">
       <div className="max-w-7xl mx-auto px-4 py-12">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {/* Logo and Description */}
@@ -17,25 +17,25 @@ const Footer = () => {
               />
               <motion.div
                 whileHover={{ scale: 1.05 }}
-                className="text-2xl font-bold font-playfair bg-prestige-gradient bg-clip-text text-transparent"
+                className="text-2xl font-bold font-playfair text-crisp-white"
               >
                 RGIT MUNSOC
               </motion.div>
             </div>
-            <p className="text-pure-white/80 text-sm leading-relaxed">
+            <p className="text-crisp-white/80 text-sm leading-relaxed">
               Where Ideas Meet Diplomacy. The Model United Nations Society of Rajiv Gandhi Institute of Technology, fostering diplomatic excellence and global awareness.
             </p>
           </div>
 
           {/* Contact Information */}
           <div className="space-y-4">
-            <h3 className="text-lg font-semibold text-sky-blue">Contact Us</h3>
+            <h3 className="text-lg font-semibold text-cool-light-blue">Contact Us</h3>
             <div className="space-y-2">
-              <div className="flex items-center space-x-2 text-pure-white/80">
+              <div className="flex items-center space-x-2 text-crisp-white/80">
                 <Mail size={16} />
                 <span className="text-sm">rgitmunsoc@gmail.com</span>
               </div>
-              <div className="flex items-center space-x-2 text-pure-white/80">
+              <div className="flex items-center space-x-2 text-crisp-white/80">
                 <MapPin size={16} />
                 <span className="text-sm">RGIT, Andheri, Mumbai</span>
               </div>
@@ -44,14 +44,14 @@ const Footer = () => {
 
           {/* Social Links */}
           <div className="space-y-4">
-            <h3 className="text-lg font-semibold text-sky-blue">Follow Us</h3>
+            <h3 className="text-lg font-semibold text-cool-light-blue">Follow Us</h3>
             <div className="flex space-x-4">
               <motion.a
                 href="https://instagram.com/rgitmunsoc"
                 target="_blank"
                 rel="noopener noreferrer"
-                whileHover={{ scale: 1.1, color: '#D4AF37' }}
-                className="text-pure-white/80 hover:text-muted-gold transition-colors"
+                whileHover={{ scale: 1.1, color: '#A9A9A9' }}
+                className="text-crisp-white/80 hover:text-muted-silver transition-colors"
               >
                 <Instagram size={24} />
               </motion.a>
@@ -59,8 +59,8 @@ const Footer = () => {
                 href="https://linkedin.com/company/rgitmunsoc"
                 target="_blank"
                 rel="noopener noreferrer"
-                whileHover={{ scale: 1.1, color: '#D4AF37' }}
-                className="text-pure-white/80 hover:text-muted-gold transition-colors"
+                whileHover={{ scale: 1.1, color: '#A9A9A9' }}
+                className="text-crisp-white/80 hover:text-muted-silver transition-colors"
               >
                 <Linkedin size={24} />
               </motion.a>
@@ -69,9 +69,9 @@ const Footer = () => {
         </div>
 
         {/* Embedded Map */}
-        <div className="mt-8 pt-8 border-t border-muted-gold/20">
-          <h3 className="text-lg font-semibold text-sky-blue mb-4">Find Us</h3>
-          <div className="relative h-64 rounded-lg overflow-hidden border border-muted-gold/30">
+        <div className="mt-8 pt-8 border-t border-muted-silver/20">
+          <h3 className="text-lg font-semibold text-cool-light-blue mb-4">Find Us</h3>
+          <div className="relative h-64 rounded-lg overflow-hidden border border-muted-silver/30">
             <iframe
               src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3769.8447446945436!2d72.8325329!3d19.1181717!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7c9c676018b43%3A0x75f29c6f2d87b24e!2sRajiv%20Gandhi%20Institute%20of%20Technology!5e0!3m2!1sen!2sin!4v1640000000000!5m2!1sen!2sin"
               width="100%"
@@ -86,8 +86,8 @@ const Footer = () => {
         </div>
 
         {/* Copyright */}
-        <div className="mt-8 pt-8 border-t border-muted-gold/20 text-center">
-          <p className="text-pure-white/60 text-sm">
+        <div className="mt-8 pt-8 border-t border-muted-silver/20 text-center">
+          <p className="text-crisp-white/60 text-sm">
             © 2024 RGIT MUNSOC. All rights reserved.
           </p>
         </div>

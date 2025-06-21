@@ -82,7 +82,7 @@ const ContactForm = () => {
     <form onSubmit={handleSubmit} className="space-y-6">
       {/* Name Field */}
       <div>
-        <label htmlFor="name" className="block text-crisp-silver font-medium mb-2">
+        <label htmlFor="name" className="block text-dark-grey font-medium mb-2">
           Name *
         </label>
         <motion.input
@@ -92,10 +92,10 @@ const ContactForm = () => {
           name="name"
           value={formData.name}
           onChange={handleChange}
-          className={`w-full px-4 py-3 bg-diplomatic-blue border rounded-lg text-crisp-silver placeholder-crisp-silver/50 focus:outline-none focus:ring-2 transition-all duration-300 ${
+          className={`w-full px-4 py-3 bg-crisp-white border rounded-lg text-dark-grey placeholder-muted-silver focus:outline-none focus:ring-2 transition-all duration-300 ${
             errors.name 
               ? 'border-red-500 focus:ring-red-500/50' 
-              : 'border-charcoal-slate focus:ring-regal-gold/50 focus:border-regal-gold'
+              : 'border-muted-silver focus:ring-cool-light-blue/50 focus:border-cool-light-blue'
           }`}
           placeholder="Your full name"
         />
@@ -112,7 +112,7 @@ const ContactForm = () => {
 
       {/* Email Field */}
       <div>
-        <label htmlFor="email" className="block text-crisp-silver font-medium mb-2">
+        <label htmlFor="email" className="block text-dark-grey font-medium mb-2">
           Email *
         </label>
         <motion.input
@@ -122,10 +122,10 @@ const ContactForm = () => {
           name="email"
           value={formData.email}
           onChange={handleChange}
-          className={`w-full px-4 py-3 bg-diplomatic-blue border rounded-lg text-crisp-silver placeholder-crisp-silver/50 focus:outline-none focus:ring-2 transition-all duration-300 ${
+          className={`w-full px-4 py-3 bg-crisp-white border rounded-lg text-dark-grey placeholder-muted-silver focus:outline-none focus:ring-2 transition-all duration-300 ${
             errors.email 
               ? 'border-red-500 focus:ring-red-500/50' 
-              : 'border-charcoal-slate focus:ring-regal-gold/50 focus:border-regal-gold'
+              : 'border-muted-silver focus:ring-cool-light-blue/50 focus:border-cool-light-blue'
           }`}
           placeholder="your.email@example.com"
         />
@@ -142,7 +142,7 @@ const ContactForm = () => {
 
       {/* Message Field */}
       <div>
-        <label htmlFor="message" className="block text-crisp-silver font-medium mb-2">
+        <label htmlFor="message" className="block text-dark-grey font-medium mb-2">
           Message *
         </label>
         <motion.textarea
@@ -152,10 +152,10 @@ const ContactForm = () => {
           value={formData.message}
           onChange={handleChange}
           rows={6}
-          className={`w-full px-4 py-3 bg-diplomatic-blue border rounded-lg text-crisp-silver placeholder-crisp-silver/50 focus:outline-none focus:ring-2 transition-all duration-300 resize-none ${
+          className={`w-full px-4 py-3 bg-crisp-white border rounded-lg text-dark-grey placeholder-muted-silver focus:outline-none focus:ring-2 transition-all duration-300 resize-none ${
             errors.message 
               ? 'border-red-500 focus:ring-red-500/50' 
-              : 'border-charcoal-slate focus:ring-regal-gold/50 focus:border-regal-gold'
+              : 'border-muted-silver focus:ring-cool-light-blue/50 focus:border-cool-light-blue'
           }`}
           placeholder="Tell us about your inquiry, collaboration ideas, or how you'd like to get involved with RGIT MUNSOC..."
         />
@@ -178,8 +178,8 @@ const ContactForm = () => {
         whileTap={{ scale: isSubmitting ? 1 : 0.95 }}
         className={`w-full flex items-center justify-center space-x-2 px-6 py-3 rounded-lg font-semibold transition-all duration-300 ${
           isSubmitting
-            ? 'bg-charcoal-slate text-crisp-silver/50 cursor-not-allowed'
-            : 'bg-regal-gold text-deep-onyx hover:bg-opacity-90'
+            ? 'bg-muted-silver text-crisp-white cursor-not-allowed'
+            : 'bg-cool-light-blue text-executive-navy hover:bg-opacity-90'
         }`}
       >
         {isSubmitting ? (
@@ -187,7 +187,7 @@ const ContactForm = () => {
             <motion.div
               animate={{ rotate: 360 }}
               transition={{ duration: 1, repeat: Infinity, ease: "linear" }}
-              className="w-5 h-5 border-2 border-crisp-silver/50 border-t-transparent rounded-full"
+              className="w-5 h-5 border-2 border-crisp-white border-t-transparent rounded-full"
             />
             <span>Sending...</span>
           </>

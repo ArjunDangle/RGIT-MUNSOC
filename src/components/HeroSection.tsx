@@ -5,53 +5,58 @@ import { ArrowRight, Globe } from 'lucide-react';
 
 const HeroSection = () => {
   return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-deep-navy">
+    <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-executive-navy">
       {/* Animated Background */}
       <div className="absolute inset-0 z-0">
-        <div className="absolute inset-0 bg-gradient-to-br from-deep-navy via-sky-blue/20 to-muted-gold/10" />
+        <div className="absolute inset-0 bg-gradient-to-br from-executive-navy via-cool-light-blue/10 to-muted-silver/5" />
         
-        {/* Floating Globe Icons */}
+        {/* Minimalistic UN-inspired floating elements - positioned to avoid mobile overlap */}
         <motion.div
           animate={{ 
             rotate: 360,
-            scale: [1, 1.1, 1]
+            scale: [1, 1.05, 1]
           }}
           transition={{ 
-            rotate: { duration: 60, repeat: Infinity, ease: "linear" },
-            scale: { duration: 4, repeat: Infinity, ease: "easeInOut" }
+            rotate: { duration: 80, repeat: Infinity, ease: "linear" },
+            scale: { duration: 6, repeat: Infinity, ease: "easeInOut" }
           }}
-          className="absolute top-20 left-20 opacity-5"
+          className="absolute top-32 left-10 md:top-20 md:left-20 opacity-5"
         >
-          <Globe size={120} className="text-pure-white" />
+          <Globe size={60} className="text-crisp-white md:w-[120px] md:h-[120px]" />
         </motion.div>
         
         <motion.div
           animate={{ 
             rotate: -360,
-            y: [0, -20, 0]
+            y: [0, -15, 0]
           }}
           transition={{ 
-            rotate: { duration: 80, repeat: Infinity, ease: "linear" },
-            y: { duration: 6, repeat: Infinity, ease: "easeInOut" }
+            rotate: { duration: 100, repeat: Infinity, ease: "linear" },
+            y: { duration: 8, repeat: Infinity, ease: "easeInOut" }
           }}
-          className="absolute bottom-32 right-32 opacity-5"
+          className="absolute bottom-40 right-10 md:bottom-32 md:right-32 opacity-3"
         >
-          <Globe size={80} className="text-pure-white" />
+          <Globe size={40} className="text-crisp-white md:w-[80px] md:h-[80px]" />
         </motion.div>
 
         <motion.div
           animate={{ 
             rotate: 360,
-            x: [0, 30, 0]
+            x: [0, 20, 0]
           }}
           transition={{ 
-            rotate: { duration: 100, repeat: Infinity, ease: "linear" },
-            x: { duration: 8, repeat: Infinity, ease: "easeInOut" }
+            rotate: { duration: 120, repeat: Infinity, ease: "linear" },
+            x: { duration: 10, repeat: Infinity, ease: "easeInOut" }
           }}
-          className="absolute top-1/2 right-20 opacity-3"
+          className="absolute top-1/2 right-5 md:right-20 opacity-2"
         >
-          <Globe size={150} className="text-pure-white" />
+          <Globe size={80} className="text-crisp-white md:w-[150px] md:h-[150px]" />
         </motion.div>
+
+        {/* Subtle world map watermark */}
+        <div className="absolute inset-0 opacity-5">
+          <div className="w-full h-full bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTAwIiBoZWlnaHQ9IjUwIiB2aWV3Qm94PSIwIDAgMTAwIDUwIiBmaWxsPSJub25lIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPgo8cGF0aCBkPSJNMTAgMjVDMTAgMzguODA3MSAyMS4xOTI5IDUwIDM1IDUwQzQ4LjgwNzEgNTAgNjAgMzguODA3MSA2MCAyNUM2MCAxMS4xOTI5IDQ4LjgwNzEgMCAzNSAwQzIxLjE5MjkgMCAxMCAxMS4xOTI5IDEwIDI1WiIgZmlsbD0iY3VycmVudENvbG9yIiBmaWxsLW9wYWNpdHk9IjAuMSIvPgo8L3N2Zz4K')] bg-repeat opacity-10"></div>
+        </div>
       </div>
 
       {/* Content */}
@@ -61,11 +66,9 @@ const HeroSection = () => {
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.2 }}
-          className="text-7xl md:text-8xl lg:text-9xl font-bold font-playfair mb-6"
+          className="text-6xl md:text-8xl lg:text-9xl font-bold font-playfair mb-6 text-crisp-white"
         >
-          <span className="bg-gradient-to-r from-pure-white to-sky-blue bg-clip-text text-transparent">
-            RGIT MUNSOC
-          </span>
+          RGIT MUNSOC
         </motion.h1>
 
         {/* Subheading */}
@@ -73,7 +76,7 @@ const HeroSection = () => {
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.4 }}
-          className="text-3xl md:text-4xl font-light font-inter text-pure-white mb-12 tracking-wide"
+          className="text-2xl md:text-4xl font-light font-inter text-crisp-white mb-12 tracking-wide"
         >
           Where Ideas Meet Diplomacy
         </motion.p>
@@ -89,11 +92,10 @@ const HeroSection = () => {
             <motion.button
               whileHover={{ 
                 scale: 1.05, 
-                boxShadow: "0 10px 25px rgba(135, 206, 235, 0.3)",
-                background: "linear-gradient(45deg, #87CEEB, #D4AF37)"
+                boxShadow: "0 10px 25px rgba(173, 216, 230, 0.3)",
               }}
               whileTap={{ scale: 0.95 }}
-              className="group bg-sky-blue text-deep-navy px-8 py-3 rounded-lg font-semibold font-inter flex items-center space-x-2 transition-all duration-300 hover:bg-opacity-90 border border-muted-gold/30"
+              className="group bg-cool-light-blue text-executive-navy px-8 py-3 rounded-lg font-semibold font-inter flex items-center space-x-2 transition-all duration-300 hover:bg-opacity-90 border border-muted-silver/30"
             >
               <span>Explore RGITMUN'25</span>
               <ArrowRight size={20} className="group-hover:translate-x-1 transition-transform" />
@@ -104,12 +106,12 @@ const HeroSection = () => {
             <motion.button
               whileHover={{ 
                 scale: 1.05,
-                backgroundColor: "#87CEEB",
+                backgroundColor: "#ADD8E6",
                 color: "#001F3F",
-                borderColor: "#D4AF37"
+                borderColor: "#A9A9A9"
               }}
               whileTap={{ scale: 0.95 }}
-              className="border-2 border-sky-blue text-sky-blue px-8 py-3 rounded-lg font-semibold font-inter transition-all duration-300"
+              className="border-2 border-cool-light-blue text-cool-light-blue px-8 py-3 rounded-lg font-semibold font-inter transition-all duration-300"
             >
               Meet the Team
             </motion.button>
@@ -127,12 +129,12 @@ const HeroSection = () => {
         <motion.div
           animate={{ y: [0, 10, 0] }}
           transition={{ duration: 2, repeat: Infinity }}
-          className="w-6 h-10 border-2 border-sky-blue rounded-full flex justify-center"
+          className="w-6 h-10 border-2 border-cool-light-blue rounded-full flex justify-center"
         >
           <motion.div
             animate={{ y: [0, 16, 0] }}
             transition={{ duration: 2, repeat: Infinity }}
-            className="w-1 h-3 bg-muted-gold rounded-full mt-2"
+            className="w-1 h-3 bg-muted-silver rounded-full mt-2"
           />
         </motion.div>
       </motion.div>
