@@ -67,12 +67,12 @@ export default {
 					border: 'hsl(var(--sidebar-border))',
 					ring: 'hsl(var(--sidebar-ring))'
 				},
-				// New UN-inspired Peace Palette
-				'un-blue': '#66B2FF',
-				'navy-blue': '#001F3F',
+				// Global Harmony Palette
+				'sky-blue': '#87CEEB',
+				'deep-navy': '#001F3F',
 				'pure-white': '#FFFFFF',
-				'charcoal-black': '#333333',
-				'soft-grey': '#CCCCCC',
+				'charcoal-grey': '#36454F',
+				'muted-gold': '#D4AF37',
 			},
 			borderRadius: {
 				lg: 'var(--radius)',
@@ -135,8 +135,8 @@ export default {
 				'scale-in': 'scale-in 0.4s ease-out'
 			},
 			backgroundImage: {
-				'peace-gradient': 'linear-gradient(135deg, #001F3F 0%, #66B2FF 100%)',
-				'un-gradient': 'linear-gradient(45deg, #66B2FF 0%, #001F3F 100%)'
+				'harmony-gradient': 'linear-gradient(135deg, #001F3F 0%, #87CEEB 100%)',
+				'prestige-gradient': 'linear-gradient(45deg, #87CEEB 0%, #D4AF37 100%)'
 			}
 		}
 	},

@@ -37,7 +37,7 @@ const QuoteCarousel = () => {
   }, [quotes.length]);
 
   return (
-    <section className="py-20 bg-navy-blue">
+    <section className="py-20 bg-deep-navy">
       <div className="max-w-4xl mx-auto px-4 text-center">
         <motion.h2
           initial={{ opacity: 0, y: 30 }}
@@ -68,13 +68,13 @@ const QuoteCarousel = () => {
                 "{quotes[currentIndex].text}"
               </motion.blockquote>
               <motion.footer 
-                className="text-un-blue"
+                className="text-sky-blue"
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 transition={{ duration: 0.4, delay: 0.4 }}
               >
                 <div className="font-semibold text-lg">{quotes[currentIndex].author}</div>
-                <div className="text-sm text-pure-white/70">{quotes[currentIndex].role}</div>
+                <div className="text-sm text-muted-gold/70">{quotes[currentIndex].role}</div>
               </motion.footer>
             </motion.div>
           </AnimatePresence>
@@ -89,7 +89,7 @@ const QuoteCarousel = () => {
               whileHover={{ scale: 1.2 }}
               whileTap={{ scale: 0.9 }}
               className={`w-3 h-3 rounded-full transition-all duration-300 ${
-                index === currentIndex ? 'bg-un-blue scale-125' : 'bg-soft-grey hover:bg-un-blue/50'
+                index === currentIndex ? 'bg-sky-blue scale-125 border border-muted-gold' : 'bg-charcoal-grey hover:bg-sky-blue/50'
               }`}
             />
           ))}

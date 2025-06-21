@@ -16,7 +16,7 @@ const Navbar = () => {
   ];
 
   return (
-    <nav className="fixed top-0 left-0 right-0 z-50 bg-navy-blue/95 backdrop-blur-sm border-b border-soft-grey/20">
+    <nav className="fixed top-0 left-0 right-0 z-50 bg-deep-navy/95 backdrop-blur-sm border-b border-muted-gold/20">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
@@ -28,7 +28,7 @@ const Navbar = () => {
             />
             <motion.div
               whileHover={{ scale: 1.05 }}
-              className="text-2xl font-bold font-playfair bg-un-gradient bg-clip-text text-transparent"
+              className="text-2xl font-bold font-playfair bg-prestige-gradient bg-clip-text text-transparent"
             >
               RGIT MUNSOC
             </motion.div>
@@ -42,15 +42,15 @@ const Navbar = () => {
                 to={item.path}
                 className={`relative px-3 py-2 text-sm font-medium transition-colors duration-200 ${
                   location.pathname === item.path
-                    ? 'text-un-blue'
-                    : 'text-pure-white hover:text-un-blue'
+                    ? 'text-sky-blue'
+                    : 'text-pure-white hover:text-sky-blue'
                 }`}
               >
                 {item.name}
                 {location.pathname === item.path && (
                   <motion.div
                     layoutId="navbar-indicator"
-                    className="absolute bottom-0 left-0 right-0 h-0.5 bg-un-blue"
+                    className="absolute bottom-0 left-0 right-0 h-0.5 bg-muted-gold"
                   />
                 )}
               </Link>
@@ -60,7 +60,7 @@ const Navbar = () => {
           {/* Mobile menu button */}
           <button
             onClick={() => setIsOpen(!isOpen)}
-            className="md:hidden p-2 text-pure-white hover:text-un-blue transition-colors"
+            className="md:hidden p-2 text-pure-white hover:text-sky-blue transition-colors"
           >
             {isOpen ? <X size={24} /> : <Menu size={24} />}
           </button>
@@ -72,7 +72,7 @@ const Navbar = () => {
             initial={{ opacity: 0, y: -20 }}
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -20 }}
-            className="md:hidden bg-navy-blue rounded-lg mt-2 p-4 border border-soft-grey/20"
+            className="md:hidden bg-deep-navy rounded-lg mt-2 p-4 border border-muted-gold/20"
           >
             {navItems.map((item) => (
               <Link
@@ -81,8 +81,8 @@ const Navbar = () => {
                 onClick={() => setIsOpen(false)}
                 className={`block px-3 py-2 text-sm font-medium transition-colors duration-200 ${
                   location.pathname === item.path
-                    ? 'text-un-blue bg-soft-grey/10 rounded'
-                    : 'text-pure-white hover:text-un-blue'
+                    ? 'text-sky-blue bg-muted-gold/10 rounded border border-muted-gold/30'
+                    : 'text-pure-white hover:text-sky-blue'
                 }`}
               >
                 {item.name}
