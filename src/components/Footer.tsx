@@ -1,4 +1,4 @@
-
+// src/components/Footer.tsx
 import { motion } from 'framer-motion';
 import { Instagram, Linkedin, Mail, MapPin } from 'lucide-react';
 
@@ -11,7 +11,7 @@ const Footer = () => {
           <div className="space-y-4">
             <div className="flex items-center space-x-3">
               <img 
-                src="/lovable-uploads/224c2136-69c0-494e-8499-61bb6bb623b7.png" 
+                src="/assets/logo-dark.png" // Changed logo source to logo-dark.png
                 alt="RGIT MUNSOC Logo" 
                 className="h-12 w-12"
               />
@@ -37,7 +37,7 @@ const Footer = () => {
               </div>
               <div className="flex items-center space-x-2 text-crisp-white/80">
                 <MapPin size={16} />
-                <span className="text-sm">RGIT, Andheri, Mumbai</span>
+                <span className="text-sm">Rajiv Gandhi Institute of Technology, Versova, Mumbai</span>
               </div>
             </div>
           </div>
@@ -51,18 +51,20 @@ const Footer = () => {
                 target="_blank"
                 rel="noopener noreferrer"
                 whileHover={{ scale: 1.1, color: '#A9A9A9' }}
-                className="text-crisp-white/80 hover:text-muted-silver transition-colors"
+                className="text-crisp-white/80 hover:text-muted-silver transition-colors flex items-center space-x-2" // Added flex for alignment
               >
                 <Instagram size={24} />
+                <span className="text-sm">Instagram</span> {/* Added Instagram handle name */}
               </motion.a>
               <motion.a
                 href="https://linkedin.com/company/rgitmunsoc"
                 target="_blank"
                 rel="noopener noreferrer"
                 whileHover={{ scale: 1.1, color: '#A9A9A9' }}
-                className="text-crisp-white/80 hover:text-muted-silver transition-colors"
+                className="text-crisp-white/80 hover:text-muted-silver transition-colors flex items-center space-x-2" // Added flex for alignment
               >
                 <Linkedin size={24} />
+                <span className="text-sm">LinkedIn</span> {/* Added LinkedIn handle name */}
               </motion.a>
             </div>
           </div>

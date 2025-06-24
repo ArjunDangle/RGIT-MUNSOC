@@ -14,10 +14,21 @@ const Home = () => {
       exit={{ opacity: 0 }}
       transition={{ duration: 0.5 }}
     >
-      <HeroSection />
-      <AboutUs />
-      <QuoteCarousel />
-      <LeaderQuotes />
+      <section id="home">
+  <HeroSection />
+</section>
+
+<section id="about">
+  <AboutUs />
+</section>
+
+<section id="quotes">
+  <QuoteCarousel />
+</section>
+
+<section id="leaders">
+  <LeaderQuotes />
+</section>
     </motion.div>
   );
 };

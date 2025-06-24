@@ -101,3 +101,8 @@
     @apply bg-background text-foreground;
   }
 }
+html, body {
+  overflow-x: hidden !important; /* Force hide horizontal overflow */
+  width: 100% !important; /* Ensure they are 100% of parent width */
+  min-width: 0 !important; /* Remove any minimum width constraints */
+}

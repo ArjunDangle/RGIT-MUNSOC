@@ -1,167 +1,98 @@
-
+// src/components/HeroSection.tsx
+import React from 'react';
+import { Button } from '@/components/ui/button';
+import { ArrowRight } from 'lucide-react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
-import { ArrowRight, Globe, Scale, Handshake, Users } from 'lucide-react';
 
 const HeroSection = () => {
-  return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-executive-navy">
-      {/* Animated Background */}
-      <div className="absolute inset-0 z-0">
-        <div className="absolute inset-0 bg-gradient-to-br from-executive-navy via-cool-light-blue/10 to-muted-silver/5" />
-        
-        {/* Large Diplomatic Vector Illustration - Center */}
-        <motion.div
-          initial={{ opacity: 0, scale: 0.8 }}
-          animate={{ opacity: 0.08, scale: 1 }}
-          transition={{ duration: 2 }}
-          className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2"
-        >
-          <div className="relative w-[600px] h-[600px] md:w-[800px] md:h-[800px]">
-            {/* World Map SVG Background */}
-            <svg viewBox="0 0 800 400" className="w-full h-full text-crisp-white/10">
-              <path d="M158 206c-1-3-2-7-2-11 0-4 1-8 2-11l46-23c4-2 9-2 13 0l46 23c1 3 2 7 2 11 0 4-1 8-2 11l-46 23c-4 2-9 2-13 0z" />
-              <circle cx="400" cy="200" r="150" fill="none" stroke="currentColor" strokeWidth="2" />
-              <path d="M300 150l200 0M300 200l200 0M300 250l200 0" stroke="currentColor" strokeWidth="1" />
-              <path d="M350 100l0 200M400 100l0 200M450 100l0 200" stroke="currentColor" strokeWidth="1" />
-            </svg>
-            {/* Overlaying diplomatic symbols */}
-            <div className="absolute inset-0 flex items-center justify-center">
-              <motion.div
-                animate={{ rotate: 360 }}
-                transition={{ duration: 120, repeat: Infinity, ease: "linear" }}
-                className="relative"
-              >
-                <Scale size={80} className="text-crisp-white/10" />
-              </motion.div>
-            </div>
-          </div>
-        </motion.div>
-        
-        {/* Smaller floating diplomatic elements - positioned to avoid mobile overlap */}
-        <motion.div
-          animate={{ 
-            rotate: 360,
-            scale: [1, 1.1, 1]
-          }}
-          transition={{ 
-            rotate: { duration: 80, repeat: Infinity, ease: "linear" },
-            scale: { duration: 8, repeat: Infinity, ease: "easeInOut" }
-          }}
-          className="absolute top-20 left-5 md:top-16 md:left-16 opacity-10"
-        >
-          <Handshake size={40} className="text-crisp-white md:w-[60px] md:h-[60px]" />
-        </motion.div>
-        
-        <motion.div
-          animate={{ 
-            rotate: -360,
-            y: [0, -15, 0]
-          }}
-          transition={{ 
-            rotate: { duration: 100, repeat: Infinity, ease: "linear" },
-            y: { duration: 10, repeat: Infinity, ease: "easeInOut" }
-          }}
-          className="absolute bottom-32 right-5 md:bottom-24 md:right-24 opacity-8"
-        >
-          <Users size={35} className="text-crisp-white md:w-[55px] md:h-[55px]" />
-        </motion.div>
+  // Function to handle the smooth scroll
+  const handleScrollToTop = () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  };
 
-        <motion.div
-          animate={{ 
-            rotate: 360,
-            x: [0, 20, 0]
-          }}
-          transition={{ 
-            rotate: { duration: 90, repeat: Infinity, ease: "linear" },
-            x: { duration: 12, repeat: Infinity, ease: "easeInOut" }
-          }}
-          className="absolute top-1/3 right-2 md:right-12 opacity-6"
-        >
-          <Globe size={45} className="text-crisp-white md:w-[70px] md:h-[70px]" />
-        </motion.div>
+  return (
+    <motion.section
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      transition={{ duration: 0.5 }}
+      // Ensure the main section explicitly hides overflow
+      className="relative min-h-screen flex items-center justify-center overflow-hidden"
+    >
+      {/* Background for Smaller/Medium Screens (Mobile View) */}
+      <div
+        className="absolute inset-0 z-0 block md:hidden bg-executive-navy"
+        // Ensure this specific mobile background container hides its own overflow
+        style={{ overflow: 'hidden' }}
+      >
+        {/*
+          Image background for mobile.
+          The path assumes 'mobile herp.jpg' is in your public/assets folder.
+          Adjust opacity-10 (10%) as needed for desired visibility under the gradient.
+          We also add a scale to make sure it's slightly larger than the container,
+          which can sometimes help fill subtle gaps caused by rendering quirks,
+          and ensure it completely covers the area without revealing edges,
+          then ensure overflow is hidden on its parent.
+        */}
+        <img
+          src="/assets/mobile herp.jpg"
+          alt="World Map Background"
+          className="absolute inset-0 w-full h-full object-cover opacity-10 scale-110" // Added scale-110
+          style={{ transform: 'scale(1.1)' }} // Fallback for scale if Tailwind doesn't apply it (or for more control)
+        />
+        {/* This gradient will sit on top of the image */}
+        <div className="absolute inset-0 bg-gradient-to-br from-executive-navy via-cool-light-blue/10 to-muted-silver/5" />
+
+        {/* Removed the motion.div that previously held the SVG.
+            This simplifies the mobile background structure to just the image and gradient.
+            If you still wanted some kind of motion/effect on the background map,
+            you'd apply it directly to the <img> tag or a new wrapper,
+            but positioning is key.
+        */}
       </div>
 
-      {/* Content */}
-      <div className="relative z-10 text-center px-4 max-w-5xl mx-auto">
-        {/* Main Heading */}
+      {/* Background for Larger Screens (Windows View) */}
+      <div
+        className="absolute inset-0 z-0 hidden md:block bg-cover bg-center"
+        style={{ backgroundImage: `url('/assets/hero bg.jpg')` }}
+      ></div>
+
+      {/* Main content - responsive text and button colors */}
+      <div className="container text-center z-10">
         <motion.h1
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.2 }}
-          className="text-6xl md:text-8xl lg:text-9xl font-bold font-cormorant mb-6 text-crisp-white"
+          initial={{ y: -50, opacity: 0 }}
+          animate={{ y: 0, opacity: 1 }}
+          transition={{ duration: 0.7, delay: 0.2 }}
+          className="font-playfair text-6xl md:text-7xl lg:text-8xl font-bold mb-4 text-crisp-white md:text-executive-navy"
         >
           RGIT MUNSOC
         </motion.h1>
-
-        {/* Subheading */}
         <motion.p
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.4 }}
-          className="text-2xl md:text-4xl font-light font-crimson text-crisp-white mb-12 tracking-wide"
+          initial={{ y: 50, opacity: 0 }}
+          animate={{ y: 0, opacity: 1 }}
+          transition={{ duration: 0.7, delay: 0.4 }}
+          className="text-xl md:text-2xl lg:text-3xl mb-8 font-light text-crisp-white md:text-executive-navy"
         >
-          Where Ideas Meet Diplomacy
+          Fostering Diplomacy, Cultivating Leaders
         </motion.p>
-
-        {/* CTA Buttons */}
         <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.6 }}
-          className="flex flex-col sm:flex-row gap-4 justify-center items-center"
+          initial={{ opacity: 0, scale: 0.8 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{ duration: 0.6, delay: 0.6, type: 'spring', stiffness: 100 }}
+          className="flex items-center justify-center" // Centering the single button
         >
-          <Link to="/rgitmun25">
-            <motion.button
-              whileHover={{ 
-                scale: 1.05, 
-                boxShadow: "0 10px 25px rgba(173, 216, 230, 0.3)",
-              }}
-              whileTap={{ scale: 0.95 }}
-              className="group bg-cool-light-blue text-executive-navy px-8 py-3 rounded-lg font-semibold font-inter flex items-center space-x-2 transition-all duration-300 hover:bg-opacity-90 border border-muted-silver/30"
-            >
-              <span>Explore RGITMUN'25</span>
-              <ArrowRight size={20} className="group-hover:translate-x-1 transition-transform" />
-            </motion.button>
-          </Link>
-
-          <Link to="/team">
-            <motion.button
-              whileHover={{ 
-                scale: 1.05,
-                backgroundColor: "#ADD8E6",
-                color: "#001F3F",
-                borderColor: "#A9A9A9"
-              }}
-              whileTap={{ scale: 0.95 }}
-              className="border-2 border-cool-light-blue text-cool-light-blue px-8 py-3 rounded-lg font-semibold font-inter transition-all duration-300"
-            >
-              Meet the Team
-            </motion.button>
+          {/* Added onClick handler to the Link for smooth scrolling */}
+          <Link to="/rgitmun25" onClick={handleScrollToTop}>
+            <Button className="bg-transparent border-4 border-muted-silver text-crisp-white hover:bg-muted-silver hover:text-executive-navy px-10 py-5 rounded-lg text-lg font-extrabold
+                               md:bg-transparent md:border-4 md:border-executive-navy md:text-executive-navy md:hover:bg-executive-navy md:hover:text-crisp-white md:px-14 md:py-7 md:text-xl md:font-extrabold">
+              RGIT MUN'25
+              <ArrowRight className="ml-2" size={20} strokeWidth={3} />
+            </Button>
           </Link>
         </motion.div>
       </div>
-
-      {/* Scroll Indicator */}
-      <motion.div
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ duration: 1, delay: 1.0 }}
-        className="absolute bottom-8 left-1/2 transform -translate-x-1/2"
-      >
-        <motion.div
-          animate={{ y: [0, 10, 0] }}
-          transition={{ duration: 2, repeat: Infinity }}
-          className="w-6 h-10 border-2 border-cool-light-blue rounded-full flex justify-center"
-        >
-          <motion.div
-            animate={{ y: [0, 16, 0] }}
-            transition={{ duration: 2, repeat: Infinity }}
-            className="w-1 h-3 bg-muted-silver rounded-full mt-2"
-          />
-        </motion.div>
-      </motion.div>
-    </section>
+      {/* Scroll Indicator has been removed */}
+    </motion.section>
   );
 };
 

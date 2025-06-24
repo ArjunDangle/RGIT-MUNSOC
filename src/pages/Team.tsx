@@ -1,83 +1,74 @@
+// src/pages/Team.tsx
 import { motion } from 'framer-motion';
 import TeamMemberCard from '@/components/TeamMemberCard';
 import PresidentsDesk from '@/components/PresidentsDesk';
 
 const Team = () => {
+  // Modified 'role' to 'position' for consistency with TeamMemberCard
   const secretariat = [
     {
       name: "Arjun Patel",
-      role: "Secretary General",
+      position: "Secretary General",
       image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80",
       linkedin: "https://linkedin.com/in/arjunpatel",
       instagram: "https://instagram.com/arjunpatel"
     },
     {
       name: "Priya Sharma",
-      role: "Deputy Secretary General",
+      position: "Deputy Secretary General",
       image: "https://images.unsplash.com/photo-1494790108755-2616b612b300?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80",
       linkedin: "https://linkedin.com/in/priyasharma",
       instagram: "https://instagram.com/priyasharma"
     },
     {
       name: "Rohan Mehta",
-      role: "USG Delegate Affairs",
-      image: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80",
+      position: "USG Delegate Affairs",
+      image: "https://images.unsplash.com/photo-1472099645785-5658abf4ff7e?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80",
       linkedin: "https://linkedin.com/in/rohanmehta",
       instagram: "https://instagram.com/rohanmehta"
     },
     {
-      name: "Ananya Singh",
-      role: "USG External Relations",
-      image: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80",
-      linkedin: "https://linkedin.com/in/ananyasingh",
-      instagram: "https://instagram.com/ananyasingh"
-    }
+      name: "Sneha Reddy",
+      position: "USG Logistics",
+      image: "https://images.unsplash.com/photo-1544005313-94ddf0286df2?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80",
+      linkedin: "https://linkedin.com/in/snehareddy",
+      instagram: "https://instagram.com/snehareddy"
+    },
   ];
 
-  const coreTeam = [
+  const core_team = [
     {
-      name: "Vikram Joshi",
-      role: "Director - UNHRC",
-      image: "https://images.unsplash.com/photo-1519244703995-f4e0f30006d5?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80",
-      linkedin: "https://linkedin.com/in/vikramjoshi",
-      instagram: "https://instagram.com/vikramjoshi"
+      name: "Aditi Singh",
+      position: "Head of Marketing",
+      image: "https://images.unsplash.com/photo-1573496359142-b8d87734b5a3?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80",
+      linkedin: "https://linkedin.com/in/aditisingh",
+      instagram: "https://instagram.com/aditisingh"
     },
     {
-      name: "Kavya Reddy",
-      role: "Director - UNSC",
-      image: "https://images.unsplash.com/photo-1487412720507-e7ab37603c6f?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80",
-      linkedin: "https://linkedin.com/in/kavyareddy",
-      instagram: "https://instagram.com/kavyareddy"
-    },
-    {
-      name: "Aditya Kumar",
-      role: "Logistics Head",
-      image: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80",
-      linkedin: "https://linkedin.com/in/adityakumar",
-      instagram: "https://instagram.com/adityakumar"
-    },
-    {
-      name: "Shreya Gupta",
-      role: "Media & Communications",
-      image: "https://images.unsplash.com/photo-1534528741775-53994a69daeb?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80",
-      linkedin: "https://linkedin.com/in/shreyagupta",
-      instagram: "https://instagram.com/shreyagupta"
-    },
-    {
-      name: "Karthik Nair",
-      role: "Technical Head",
+      name: "Kabir Khan",
+      position: "Head of Content",
       image: "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80",
-      linkedin: "https://linkedin.com/in/kartiknair",
-      instagram: "https://instagram.com/kartiknair"
+      linkedin: "https://linkedin.com/in/kabirkhan",
+      instagram: "https://instagram.com/kabirkhan"
     },
     {
-      name: "Riya Chopra",
-      role: "Design & Creative Head",
-      image: "https://images.unsplash.com/photo-1544005313-94ddf0286df2?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80",
-      linkedin: "https://linkedin.com/in/riyachopra",
-      instagram: "https://instagram.com/riyachopra"
-    }
+      name: "Vivek Gupta",
+      position: "Head of Outreach",
+      image: "https://images.unsplash.com/photo-1560250097-0b93528c311a?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80",
+      linkedin: "https://linkedin.com/in/vivekgupta",
+      instagram: "https://instagram.com/vivekgupta"
+    },
+    {
+      name: "Ishaan Das",
+      position: "Head of Finance",
+      image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80",
+      linkedin: "https://linkedin.com/in/ishaandas",
+      instagram: "https://instagram.com/ishaandas"
+    },
   ];
+
+  // Combined all team members into a single array
+  const allTeamMembers = [...secretariat, ...core_team];
 
   return (
     <motion.div
@@ -85,35 +76,40 @@ const Team = () => {
       animate={{ opacity: 1 }}
       exit={{ opacity: 0 }}
       transition={{ duration: 0.5 }}
-      className="pt-16"
+      className="pt-16 overflow-x-hidden"
     >
-      {/* Hero Section */}
-      <section className="relative py-20 bg-diplomatic-gradient">
-        <div className="max-w-4xl mx-auto px-4 text-center">
+      {/* Team Hero Section */}
+      <section id="team_hero" className="relative min-h-[60vh] flex items-center justify-center overflow-hidden bg-executive-navy">
+        {/* Removed background image and overlay, reverting to solid color */}
+        
+        {/* Content */}
+        <div className="relative z-10 text-center max-w-4xl mx-auto px-4 py-12">
           <motion.h1
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
-            className="text-6xl md:text-7xl lg:text-8xl font-bold font-playfair text-crisp-silver mb-6"
+            className="text-5xl md:text-7xl font-bold text-crisp-white mb-4 font-playfair"
           >
-            Our Team
+            Meet Our Team
           </motion.h1>
           <motion.p
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
-            className="text-xl font-inter text-crisp-silver/80 leading-relaxed"
+            className="text-lg md:text-xl text-crisp-white/90 leading-relaxed font-inter"
           >
-            Meet the dedicated individuals who make RGIT MUNSOC a beacon of diplomatic excellence
+            The dedicated individuals who drive RGIT MUNSOC, fostering diplomacy and cultivating future leaders.
           </motion.p>
         </div>
       </section>
 
       {/* President's Desk Section */}
-      <PresidentsDesk />
+      <section id = 'president_desk'>
+        <PresidentsDesk />
+      </section>
 
-      {/* Secretariat Section */}
-      <section className="py-20 bg-charcoal-slate">
+      {/* Combined Core Team Section */}
+      <section id="core_team" className="py-20 bg-deep-onyx">
         <div className="max-w-7xl mx-auto px-4">
           <motion.div
             initial={{ opacity: 0, y: 50 }}
@@ -123,42 +119,19 @@ const Team = () => {
             className="text-center mb-16"
           >
             <h2 className="text-5xl md:text-6xl font-bold font-playfair text-crisp-silver mb-6">
-              Secretariat
+              Our Dedicated Core Team
             </h2>
             <div className="w-24 h-1 bg-diplomatic-blue mx-auto"></div>
           </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {secretariat.map((member, index) => (
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
+            {allTeamMembers.map((member, index) => (
               <TeamMemberCard key={index} member={member} index={index} />
             ))}
           </div>
         </div>
       </section>
 
-      {/* Core Team Section */}
-      <section className="py-20 bg-deep-onyx">
-        <div className="max-w-7xl mx-auto px-4">
-          <motion.div
-            initial={{ opacity: 0, y: 50 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-            className="text-center mb-16"
-          >
-            <h2 className="text-5xl md:text-6xl font-bold font-playfair text-crisp-silver mb-6">
-              Core Team
-            </h2>
-            <div className="w-24 h-1 bg-diplomatic-blue mx-auto"></div>
-          </motion.div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {coreTeam.map((member, index) => (
-              <TeamMemberCard key={index} member={member} index={index} />
-            ))}
-          </div>
-        </div>
-      </section>
     </motion.div>
   );
 };

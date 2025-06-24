@@ -1,4 +1,4 @@
-
+// src/components/AboutUs.tsx
 import { motion } from 'framer-motion';
 import { useInView } from 'framer-motion';
 import { useRef } from 'react';
@@ -28,7 +28,7 @@ const AboutUs = () => {
             animate={isInView ? { opacity: 1, x: 0 } : {}}
             transition={{ duration: 0.8, delay: 0.2 }}
           >
-            <h3 className="text-3xl md:text-4xl font-semibold font-playfair text-dark-grey mb-6">Our Mission</h3>
+            <h3 className="text-3xl md:text-4xl font-semibold font-playfair text-dark-grey mb-6 text-center md:text-left">Our Mission</h3> {/* Added text-center md:text-left */}
             <p className="text-muted-silver text-lg font-inter leading-relaxed mb-6">
               The Model United Nations Society of Rajiv Gandhi Institute of Technology stands as a beacon of diplomatic excellence, fostering critical thinking, global awareness, and the art of negotiation among tomorrow's leaders.
             </p>

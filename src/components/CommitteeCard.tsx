@@ -1,4 +1,4 @@
-
+// src/components/CommitteeCard.tsx
 import { motion } from 'framer-motion';
 import { Download, Users, FileText } from 'lucide-react';
 
@@ -8,6 +8,7 @@ interface Committee {
   agenda: string;
   description: string;
   backgroundGuide: string;
+  imageUrl?: string; // Added optional imageUrl property
 }
 
 interface CommitteeCardProps {
@@ -36,7 +37,16 @@ const CommitteeCard = ({ committee, index }: CommitteeCardProps) => {
           whileHover={{ rotate: 15, scale: 1.1 }}
           transition={{ duration: 0.2 }}
         >
-          <Users className="text-crisp-silver" size={32} />
+          {/* Conditional rendering for logo/image */}
+          {committee.imageUrl ? (
+            <img 
+              src={committee.imageUrl} 
+              alt={`${committee.abbreviation} logo`} 
+              className="w-12 h-12 object-contain" // Size increased, filter removed
+            />
+          ) : (
+            <Users className="text-crisp-silver" size={32} />
+          )}
         </motion.div>
       </div>
 
@@ -59,12 +69,12 @@ const CommitteeCard = ({ committee, index }: CommitteeCardProps) => {
       </p>
 
       <motion.button
-        whileHover={{ scale: 1.05, backgroundColor: "#2C3E50", color: "#F0F0F0" }}
+        whileHover={{ scale: 1.05, backgroundColor: "#2C3E50" }}
         whileTap={{ scale: 0.95 }}
-        className="flex items-center space-x-2 text-crisp-silver border border-crisp-silver/30 px-4 py-2 rounded-lg transition-all duration-300"
+        className="flex items-center justify-center bg-diplomatic-blue text-crisp-silver px-6 py-2 rounded-lg font-semibold text-base transition-all duration-300 border border-crisp-silver/30 hover:border-crisp-white w-full"
       >
-        <Download size={16} />
-        <span>Background Guide</span>
+        <Download size={18} className="mr-2" />
+        Background Guide
       </motion.button>
     </motion.div>
   );
