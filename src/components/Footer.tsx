@@ -74,8 +74,8 @@ const Footer = () => {
         <div className="mt-8 pt-8 border-t border-muted-silver/20">
           <h3 className="text-lg font-semibold text-cool-light-blue mb-4">Find Us</h3>
           <div className="relative h-64 rounded-lg overflow-hidden border border-muted-silver/30">
-            <iframe
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3769.8447446945436!2d72.8325329!3d19.1181717!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7c9c676018b43%3A0x75f29c6f2d87b24e!2sRajiv%20Gandhi%20Institute%20of%20Technology!5e0!3m2!1sen!2sin!4v1640000000000!5m2!1sen!2sin"
+           <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3769.6890513082726!2d72.82113937520649!3d19.121292482092652!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7c9e13ef12003%3A0x5767a74a751ccaf9!2sRajiv%20Gandhi%20Institute%20of%20Technology!5e0!3m2!1sen!2sin!4v1750795425830!5m2!1sen!2sin"
               width="100%"
               height="100%"
               style={{ border: 0 }}
@@ -83,7 +83,8 @@ const Footer = () => {
               loading="lazy"
               referrerPolicy="no-referrer-when-downgrade"
               className="grayscale hover:grayscale-0 transition-all duration-300"
-            ></iframe>
+            />
+
           </div>
         </div>
 
