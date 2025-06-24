@@ -8,20 +8,20 @@ const TeamMemberCard = ({ member, index }) => (
     whileInView={{ opacity: 1, y: 0 }}
     viewport={{ once: true }}
     transition={{ duration: 0.5, delay: index * 0.1 }}
-    whileHover={{ y: -8, scale: 1.03 }}
-    className="group bg-crisp-white rounded-3xl shadow-lg p-8 flex flex-col items-center text-center hover:shadow-2xl transition-all cursor-pointer border border-transparent hover:border-cool-light-blue hover:border-2"
+    whileHover={{ y: -5 }}
+    className="group bg-crisp-white rounded-3xl shadow-md hover:shadow-2xl p-8 flex flex-col items-center text-center transition-all cursor-pointer"
   >
     {/* Image */}
-    <div className="w-44 h-44 rounded-full overflow-hidden mb-6 border-4 border-muted-silver/30 group-hover:border-cool-light-blue transition-colors duration-300">
+    <div className="w-44 h-44 rounded-full overflow-hidden mb-6 shadow-inner">
       <img
         src={member.image}
         alt={member.name}
-        className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+        className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
       />
     </div>
 
     {/* Name */}
-    <h3 className="text-2xl font-semibold md:text-3xl font-playfair text-deep-onyx mb-1 group-hover:text-cool-light-blue transition-colors duration-300">
+    <h3 className="text-2xl font-semibold md:text-3xl font-playfair text-deep-onyx mb-1">
       {member.name}
     </h3>
 
@@ -37,7 +37,7 @@ const TeamMemberCard = ({ member, index }) => (
           href={member.instagram}
           target="_blank"
           rel="noopener noreferrer"
-          className="text-[#E4405F] hover:scale-125 transition-transform"
+          className="text-[#E4405F] hover:scale-110 transition-transform"
         >
           <Instagram className="w-7 h-7" />
         </a>
@@ -47,7 +47,7 @@ const TeamMemberCard = ({ member, index }) => (
           href={member.linkedin}
           target="_blank"
           rel="noopener noreferrer"
-          className="text-[#0077B5] hover:scale-125 transition-transform"
+          className="text-[#0077B5] hover:scale-110 transition-transform"
         >
           <Linkedin className="w-7 h-7" />
         </a>
