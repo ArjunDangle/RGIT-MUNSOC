@@ -74,7 +74,7 @@ const PresidentsDesk = () => {
           {/* Heading (desktop only) */}
           <div className="hidden md:block mb-6">
             <h2 className="text-5xl md:text-6xl font-bold font-playfair text-dark-grey">
-              From the General Secretary’s Desk
+              From the Secretary General's Desk
             </h2>
           </div>
 
