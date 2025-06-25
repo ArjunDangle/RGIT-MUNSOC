@@ -39,7 +39,7 @@ const PresidentsDesk = () => {
             Aryan Mullick
           </h3>
           <p className="text-lg md:text-xl text-muted-silver mb-4">
-            General Secretary | 2024 - 2025
+            Secretary General | 2024 - 2025
           </p>
 
           {/* Social Links */}
