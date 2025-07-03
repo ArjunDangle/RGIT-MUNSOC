@@ -16,7 +16,7 @@ const PresidentsDesk = () => {
           className="w-full text-center mb-6 md:hidden"
         >
           <h2 className="text-5xl md:text-6xl font-bold font-playfair text-dark-grey">
-            From the General Secretary’s Desk
+            From the Secretary General's Desk
           </h2>
         </motion.div>
 
