@@ -3,6 +3,7 @@ import { motion } from 'framer-motion';
 import { useInView } from 'framer-motion';
 import { useRef } from 'react';
 
+
 const LeaderQuotes = () => {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, amount: 0.1 });
@@ -12,37 +13,37 @@ const LeaderQuotes = () => {
       text: "The United Nations is our one great hope for a peaceful and free world.",
       author: "Ralph Bunche",
       title: "Nobel Peace Prize Winner, UN Mediator",
-      image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80"
+      image: "/assets/leadersquotes/Ralph_Bunche.jpg"
     },
     {
       text: "Peace cannot be kept by force; it can only be achieved by understanding.",
       author: "Albert Einstein",
       title: "Theoretical Physicist & Peace Activist",
-      image: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80"
+      image: "/assets/leadersquotes/Albert_Einstein.jpeg"
     },
     {
       text: "If you want to make peace with your enemy, you have to work with your enemy. Then he becomes your partner.",
       author: "Nelson Mandela",
       title: "Former President of South Africa",
-      image: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80"
+      image: "/assets/leadersquotes/Nelson_Mandela.jpeg"
     },
     {
       text: "We must learn to live together as brothers or perish together as fools.",
       author: "Martin Luther King Jr.",
       title: "Civil Rights Leader & Nobel Laureate",
-      image: "https://images.unsplash.com/photo-1519244703995-f4e0f30006d5?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80"
+      image: "/assets/leadersquotes/Martin_Luther_King_Jr.jpg"
     },
     {
       text: "The world is a dangerous place to live; not because of the people who are evil, but because of the people who don't do anything about it.",
       author: "Albert Einstein",
       title: "On Global Responsibility",
-      image: "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80"
+      image: "/assets/leadersquotes/Albert_Einstein.jpeg"
     },
     {
       text: "Education is the most powerful weapon which you can use to change the world.",
       author: "Nelson Mandela",
       title: "On Education & Change",
-      image: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80"
+      image: "/assets/leadersquotes/Nelson_Mandela.jpeg"
     }
   ];
 
