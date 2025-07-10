@@ -9,28 +9,28 @@ const QuoteCarousel = () => {
       text: "The UN was designed to be a club of the world's great powers, and that's exactly what it is.",
       author: "Samantha Power",
       role: "Former UN Ambassador",
-      image: "https://images.unsplash.com/photo-1494790108755-2616b612b786?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80",
+      image: "/assets/leadersquotes/Samantha_Power.jpg",
       country: "United States"
     },
     {
       text: "Diplomacy is the art of restraining power.",
       author: "Hans Morgenthau",
       role: "Political Scientist",
-      image: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80",
+      image: "/assets/leadersquotes/Hans_Morgenthau.jpg",
       country: "Germany"
     },
     {
       text: "The United Nations is our one great hope for a peaceful and free world.",
       author: "Ralph Bunche",
       role: "Nobel Peace Prize Winner",
-      image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80",
+      image: "/assets/leadersquotes/Ralph_Bunche.jpg",
       country: "United States"
     },
     {
       text: "In diplomacy, as in life itself, one often learns more from failures than from successes.",
       author: "Dag Hammarskjöld",
       role: "Former UN Secretary-General",
-      image: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80",
+      image: "/assets/leadersquotes/Dag Hammarskjöld.jpeg",
       country: "Sweden"
     }
   ];
