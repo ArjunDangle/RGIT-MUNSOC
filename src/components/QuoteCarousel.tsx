@@ -30,7 +30,7 @@ const QuoteCarousel = () => {
       text: "In diplomacy, as in life itself, one often learns more from failures than from successes.",
       author: "Dag Hammarskjöld",
       role: "Former UN Secretary-General",
-      image: "/assets/leadersquotes/Dag Hammarskjöld.jpeg",
+      image: "/assets/leadersquotes/Dag_Hammarskjöld.jpeg",
       country: "Sweden"
     }
   ];
