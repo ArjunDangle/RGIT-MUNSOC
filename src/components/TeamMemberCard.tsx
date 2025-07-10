@@ -2,12 +2,12 @@
 import { motion } from 'framer-motion';
 import { Instagram, Linkedin } from 'lucide-react';
 
-const TeamMemberCard = ({ member, index }) => (
+const TeamMemberCard = ({ member }) => (
   <motion.div
-    initial={{ opacity: 0, y: 30 }}
-    whileInView={{ opacity: 1, y: 0 }}
+    initial={{ opacity: 0, x: 50 }}
+    whileInView={{ opacity: 1, x: 0 }}
     viewport={{ once: true }}
-    transition={{ duration: 0.6, delay: index * 0.1, ease: 'easeOut' }}
+    transition={{ duration: 0.6, ease: 'easeOut' }}
     className="flex flex-col items-center text-center"
   >
     {/* Image Card */}
