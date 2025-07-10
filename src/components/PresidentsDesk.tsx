@@ -29,7 +29,7 @@ const PresidentsDesk = () => {
           className="w-full md:w-1/2 flex flex-col items-center text-center"
         >
           <img
-            src="/assets/team/president.jpg"
+            src="/assets/team/aryan_mullick.jpg"
             alt="General Secretary"
             className="w-80 md:w-[24rem] h-80 md:h-[24rem] rounded-full object-cover shadow-xl hover:scale-105 transition-transform duration-500 mb-4"
           />
@@ -79,15 +79,15 @@ const PresidentsDesk = () => {
           </div>
 
           <p className="text-lg md:text-xl text-muted-silver leading-relaxed mb-6">
-            Welcome to RGIT MUNSOC, where diplomacy, leadership, and excellence converge. As the General Secretary, I am honored to guide this society and work alongside a team of exceptional individuals who are passionate about shaping a better future.
+            Welcome to RGIT MUNSOC , a space where diplomacy, leadership, and excellence converge. As Secretary General, it is my privilege to lead a community dedicated to shaping meaningful change through dialogue and vision.
           </p>
 
           <p className="text-lg md:text-xl text-muted-silver leading-relaxed mb-6">
-            RGIT MUNSOC is not just a platform for debate; it is a transformative space where young minds cultivate critical thinking, embrace diversity, and engage in meaningful dialogue on global issues. We strive to empower every delegate to rise as a thoughtful leader with compassion and vision.
+            RGIT MUNSOC is more than just a debating platform. It is a transformative experience where students challenge perspectives, embrace diversity, and develop into thoughtful, globally-aware leaders. Here, every voice matters, and every session is an opportunity to grow.
           </p>
 
           <p className="text-lg md:text-xl text-muted-silver leading-relaxed mb-6">
-            I invite you to be a part of this journey. Together, let’s continue to challenge boundaries, foster understanding, and lead with purpose.
+            I invite you to join us in this journey — to question, to lead, and to inspire. Together, let us foster understanding, break barriers, and carry forward the spirit of diplomacy.
           </p>
         </motion.div>
 
